@@ -1,0 +1,37 @@
+/********************/
+/*  General rules   */
+/********************/
+@import 'reset';
+@import 'fonts';
+@import 'presets/placeholder';
+@import 'texts';
+
+/****************/
+/*  Navigation  */
+/****************/
+
+@import 'navigation/header';
+@import 'navigation/footer';
+@import 'navigation/menus';
+
+/********************/
+/*      Pages       */
+/********************/
+
+@import 'pages/contact';
+@import 'pages/single-photo';
+//@import 'pages/front-page';
+
+/********************/
+/*    Animations    */
+/********************/
+@import 'animation/keyframes';
+/********************/
+/*  ??????????????  */
+/********************/
+/* @import ''; */
+/* @import 'presets/mixins'; */
+/********************/
+/* Special features */
+/********************/
+@import 'special-features/arrows';

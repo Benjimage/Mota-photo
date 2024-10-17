@@ -1,0 +1,141 @@
+Typographies : 
+
+Arial :700
+Space Mono : 700 i,400 i, 400
+Poppins : 300
+
+DESKTOP:
+
+    font-family: Arial;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 24.15px;
+    letter-spacing: 0.1em;
+    text-align: left;
+
+    //styleName: H1 desktop;
+    font-family: Space Mono;
+    font-size: 96px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 142.18px;
+    text-align: left;
+
+    //styleName: H2 desktop;
+    font-family: Space Mono;
+    font-size: 66px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 58px;
+    text-align: left;
+
+    //styleName: H3 desktop;
+    font-family: Space Mono;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.66px;
+    letter-spacing: 0.1em;
+    text-align: left;
+
+    //styleName: Description photo de;
+    font-family: Space Mono;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.73px;
+    letter-spacing: 0.1em;
+    text-align: left;
+
+    //styleName: p;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: left;
+
+MOBILE:
+
+    //styleName: H1 mobile;
+    font-family: Space Mono;
+    font-size: 27.59px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 40.86px;
+    text-align: left;
+
+    //styleName: H2 mobile;
+    font-family: Space Mono;
+    font-size: 46px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+
+    //styleName: H3 desktop;
+    font-family: Space Mono;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.66px;
+    letter-spacing: 0.1em;
+    text-align: left;
+
+    //styleName: Description photo mobile;
+    font-family: Space Mono;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.73px;
+    letter-spacing: 0.1em;
+    text-align: left;
+
+    //styleName: p;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: left;
+
+Couleurs :
+
+#e00000     #000000     #d8d8d8
+
+#fe5858     #313144     #e5e5e5
+
+#ffd6d6     #c4c4c4
+
+@font-face {
+    font-family: '';
+    font-style: normal;
+    src: url('../fonts/') format('woff2'),
+         url('../fonts/') format('woff');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lien vers les images Pixabay :
+Image par <a href="https://pixabay.com/fr/users/gdj-1086657/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6319747">Gordon Johnson</a> de <a href="https://pixabay.com/fr//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6319747">Pixabay</a>
+Image par <a href="https://pixabay.com/fr/users/gdj-1086657/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6319747">Gordon Johnson</a> de <a href="https://pixabay.com/fr//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6319747">Pixabay</a>
+Image par <a href="https://pixabay.com/fr/users/land_of_books_youtube-7733644/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8796734">Jummi F.</a> de <a href="https://pixabay.com/fr//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8796734">Pixabay</a>

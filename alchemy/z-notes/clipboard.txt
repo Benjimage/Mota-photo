@@ -1,0 +1,68 @@
+ "editor.language.colorizedBracketPairs": [
+        
+    ],
+
+@extend %flex-j-center;
+
+@extend %border-marking;
+
+    border: 1px solid blue;
+
+<?php echo /* get_the_terms( $post->ID, 'Categorie photo'); */ ?>
+
+<?php echo /* get_the_terms( $post->ID, 'Format photo'); */ ?>
+
+ <div class="post">
+        <h2 class="single-photo-title"><?php the_title();?></h2>
+        <img src="<?php the_post_thumbnail();?>">
+        <ul>
+            <li>Référence : <?php echo get_post_meta( $post->ID, 'Référence', true ); ?></li>
+            <li>Catégorie : <?php echo strip_tags(get_the_term_list( $post->ID, 'categories photos' )); ?></li>
+            <li>Format : <?php echo strip_tags(get_the_term_list( $post->ID, 'format' )); ?></li>
+            <li>Type: <?php echo get_post_meta( $post->ID, 'Type', true ); ?></li>
+            <li>Année : <?php echo get_post_meta( $post->ID, 'Année', true ); ?></li>
+        </ul>
+    </div>
+   ========================================================================================================================================= 
+    <div class="left-arrow">
+        <div></div>
+	</div>
+    <div class="right-arrow">                        
+        <div></div>                        
+    </div>                        
+.left-arrow {
+  width: 8px;
+  height: 8px;
+  transform: rotate(-45deg);
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  position: relative;
+ }
+ .left-arrow div{
+  width: 25px;
+  height: 1px;
+  border: 1px solid #000;
+  transform: rotate(45deg);
+  position: absolute;
+  top:8px;
+  left:-4px;
+ }
+ .right-arrow {
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  position: relative;
+ }
+ .right-arrow  div{
+  width: 25px;
+  height: 1px;
+  border: 1px solid #000;
+  transform: rotate(-45deg);
+  position: absolute;
+  top:8px;
+  right:-4px;
+ }
+ <span class="left-arrow">&#8592;</span>
+                            <span class="right-arrow">&#8594;</span>

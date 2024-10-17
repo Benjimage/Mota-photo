@@ -1,0 +1,46 @@
+.prev {
+    width:40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.next {
+    width:40px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.left-arrow {
+    width: 8px;
+    height: 8px;
+    transform: rotate(-45deg);
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    position: relative;
+   }
+   .left-arrow div{
+    width: 25px;
+    height: 1px;
+    border: 1px solid #000;
+    transform: rotate(45deg);
+    position: absolute;
+    top:8px;
+    left:-4px;
+   }
+   .right-arrow {
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    position: relative;
+   }
+   .right-arrow  div{
+    width: 25px;
+    height: 1px;
+    border: 1px solid #000;
+    transform: rotate(-45deg);
+    position: absolute;
+    top:8px;
+    right:-4px;
+   }

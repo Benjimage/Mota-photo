@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo CPT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <img src="images/Logo.svg" class="menu-img">
+            <nav>
+                <ul>
+                    <li>Accueil</li>
+                    <li>À propos</li>
+                    <li id="contact" class="contact">Contact</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="top">
+                <div class="left-column">
+                    <div class="meta">
+                        <h2 class="single-photo-title">TEAM MARIÉE</h2>
+                        <ul>
+                            <li>Référence : bf2389</li>
+                            <li>Catégorie : Mariage</li>
+                            <li>Format : Portait</li>
+                            <li>Type: numérique</li>
+                            <li>Année : 2022</li>
+                        </ul>
+                    </div>
+                   
+                </div>
+                    <figure class="main-picture">
+                        <img src="images/nathalie-15.jpeg" alt="">
+                    </figure>
+            </div>
+            
+            <div class="middle">
+                <div class="left">
+                    <p>Cette photo vous intéresse ?</p>
+                    <div class="btn">Contact</div>
+                </div>
+                
+                <div class="preview">
+                    <figure class="miniature">
+                        <img src="images/nathalie-6.jpeg" alt="">
+                    </figure>
+                    <div class="cmd">
+                        <span>&#8592;</span>
+                        <span>&#8594;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                    <h6 class="bottom-title">VOUS AIMEREZ AUSSI</h6>
+                <div class="liked">
+                    <img src="images/nathalie-11.jpeg" alt="">
+                  
+                    <img src="images/nathalie-10.jpeg" alt="">
+                    
+                </div>
+              
+            </div>
+        </div>
+    </main>
+<footer>
+    <div id="contact-modal" class="modal">
+      <div class="contact-form ">
+        <div class="contact-header"><img src="images/Contact header.svg" alt=""></div>
+        
+        <form action="">
+            <label for="name">NAME
+                <input type="text" name="name" id="name">
+            </label>
+            <label for="name">E-MAIL
+                <input type="email" name="email" id="email">
+            </label>
+            <label for="photo">REF.PHOTO
+                <input type="text" name="photo" id="photo">
+            </label>
+            <label for="message">MESSAGE
+                <textarea name="message" id="message" rows="16"></textarea>
+            </label>
+            <input type="submit" value="Envoyer" id="submit">
+        </form>
+      </div>
+    
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
