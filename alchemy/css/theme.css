@@ -251,7 +251,7 @@ textarea {
 }
 
 .middle {
-  height: 110px;
+  height: 120px;
   padding: 8px 0;
   display: flex;
   align-items: center;
@@ -302,10 +302,11 @@ textarea {
   overflow: hidden;
 }
 
-/* .miniature img {
+.miniature img {
   max-height: 100%;
-  object-fit:contain;
-} */
+  object-fit: cover;
+}
+
 .left p {
   font-family: Poppins;
   font-size: 14px;
@@ -336,7 +337,7 @@ textarea {
   gap: 20px;
 }
 
-.liked > img {
+.liked-img {
   object-fit: cover;
   width: 564px;
   height: 495px;

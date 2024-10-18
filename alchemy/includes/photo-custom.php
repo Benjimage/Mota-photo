@@ -35,7 +35,7 @@ function photo_post_type() {
 		'label'                 => __( 'photo', 'text_domain' ),
 		'description'           => __( 'Post Type Description', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+		'supports'              => array( 'title', 'thumbnail', 'custom-fields' ),
 		'taxonomies'            => array(),
 		'hierarchical'          => false,
 		'public'                => true,
@@ -128,7 +128,7 @@ function categories_photos() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'categories photos', array( 'photo' ), $args );
+	register_taxonomy( 'categories-photos', array( 'photo' ), $args );
 
 }
 add_action( 'init', 'categories_photos', 0 );
