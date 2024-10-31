@@ -20,7 +20,7 @@
 
 @import 'pages/contact';
 @import 'pages/single-photo';
-//@import 'pages/front-page';
+@import 'pages/front-page';
 
 /********************/
 /*    Animations    */
@@ -34,4 +34,5 @@
 /********************/
 /* Special features */
 /********************/
-@import 'special-features/arrows';
+//@import 'special-features/arrows';
+@import 'special-features/card';

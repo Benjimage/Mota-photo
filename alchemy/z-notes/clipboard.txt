@@ -7,6 +7,11 @@
 @extend %border-marking;
 
     border: 1px solid blue;
+  border: 1px solid rgb(206, 10, 231);
+  border: 1px solid rgb(31, 49, 211);
+  border: 1px solid rgb(0, 255, 55);
+
+
 
 <?php echo /* get_the_terms( $post->ID, 'Categorie photo'); */ ?>
 
@@ -81,3 +86,111 @@
     <li>Type: <?php echo get_field( 'type'); ?></li>
     <li>Année : <?php echo get_the_date('Y'); ?></li>
 </ul>
+
+   <?php
+$post_id = get_the_ID(); // Récupération de l'ID du post actuel
+$reference = get_post_meta($post_id, 'votre_cle_de_reference', true); // Récupération de la référence de la photo
+
+?>
+
+<!-- Votre formulaire HTML -->
+<input type="text" name="reference" value="<?php echo esc_attr($reference); ?>">
+=======================================================================================================================================================================================
+<?php get_header() ?>
+<h1>Liste photo</h1>
+    <?php if(have_posts()) : while(have_posts()) : the_post();?>
+       <h2><?php the_title();?></h2>
+    <?php
+        /* var_dump($post); */
+        the_content();
+            /* echo '<img src="<?php the_post_thumbnail();?>">'; */
+            echo '<hr>';
+            endwhile;
+        else :
+            echo '<p>No content found</p>';
+        endif;
+    ?>
+
+<?php get_footer() ?>
+
+<div class="banner"> 
+    <?php    
+        $param = array(
+            'post_type' => 'page',
+            'posts_per_page' => 1,
+            'orderby' => 'rand',
+            /* 'post__not_in' => array(get_the_ID()), */
+            /* 'tax_query' => array(
+                array(
+                    'taxonomy' => 'categories-photos',
+                    'field' => 'slug',
+                    'terms' => get_the_term_list( $post->ID, 'categories-photos' ), // à mettre dans une variable !
+                )
+            )  */              
+        );
+        $banner = new WP_Query($param);
+            if($banner->have_posts()):
+                while($banner->have_posts()): $banner->the_post();
+                the_post_thumbnail(null, 'full', array('class'=>'banner-img'));
+            endwhile;
+            endif;
+            wp_reset_postdata();
+    ?>
+</div>
+
+<?php /* echo __DIR__ .'<br>'; */ ?>
+<?php /* echo __LINE__ .'<br>'; */ ?>
+<?php /* echo __FILE__ ; */ ?>
+
+$(".btn").on("click", function (e) {
+    e.preventDefault(); 
+    const inputValue = $(this).data("reference");
+    $("#ref-photo").val(inputValue);
+    $("#wpcf7-f24-o1").show();
+  });
+
+// functions.php
+
+function mon_theme_enqueue_scripts() {
+    // Récupérer la valeur du champ ACF 'reference'
+    $reference_value = get_field('reference');
+
+    // Enqueue le script JavaScript
+    wp_enqueue_script('mon-script', get_template_directory_uri() . '/js/mon-script.js', array('jquery'), null, true);
+
+    // Passer la valeur à JavaScript
+    wp_localize_script('mon-script', 'monObjet', array(
+        'referenceValue' => esc_js($reference_value) // Échapper la valeur pour JavaScript
+    ));
+}
+add_action('wp_enqueue_scripts', 'mon_theme_enqueue_scripts');
+
+/* Affichage de la référence photo */
+/* Affichage des photos suivantes et précédente au hover  */
+
+
+/* console.log(leftArrow); */
+/* console.log(rightArrow); */
+/* console.log('OK Left') */
+/* console.log('BYE Left') */
+/* console.log('OK Right') */
+/* console.log('BYE Right') */
+
+==========================================================================================================
+PREVIEW
+ <div class="preview">
+                    <div class="miniature prev-thumbnail">
+                        <?php echo get_the_post_thumbnail( get_previous_post(), 'post-thumbnail', array('class' => 'back') ); ?> 
+                        </div>
+                        <div class="miniature next-thumbnail">
+                        <?php echo get_the_post_thumbnail( get_next_post(), 'post-thumbnail', array('class' => 'to') ); ?> 
+                        </div>
+                        <div class="cmd">
+                            <a href="<?php echo get_the_permalink(get_previous_post())?>" class="prev">
+                                <img src="<?php echo get_template_directory_uri() ."/assets/icones/left-arrow.svg"?>" class="arrow left">
+                            </a>
+                            <a href="<?php echo get_the_permalink(get_next_post())?>" class="next">
+                                <img src="<?php echo get_template_directory_uri() ."/assets/icones/right-arrow.svg"?>" class="arrow right">
+                            </a>
+                        </div>
+                    </div>

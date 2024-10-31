@@ -1,14 +1,25 @@
-const leftArrow = document.querySelector('.prev');
-console.log(leftArrow);
-const rightArrow = document.querySelector('.next');
-console.log(rightArrow);
+const leftArrow = document.querySelector('.left');
+const rightArrow = document.querySelector('.right');
 
 
-leftArrow.addEventListener('click', () => {
-    console.log('OK Left')
+leftArrow.addEventListener('mouseover', () => {
+    let thumbNail = document.querySelector('.back')
+    thumbNail.style = 'opacity: 1; transition: 0.6s';
     }
 ) ;
-rightArrow.addEventListener('click', () => {
-    console.log('OK Right')
+leftArrow.addEventListener('mouseout', () => {
+    let thumbNail = document.querySelector('.back')
+    thumbNail.style = 'opacity: 0; transition: 0.6s';
+    }
+) ;
+
+rightArrow.addEventListener('mouseover', () => {
+    let thumbNail = document.querySelector('.to')
+    thumbNail.style = 'opacity: 1; transition: 0.6s';
+    }
+) ;
+rightArrow.addEventListener('mouseout', () => {
+    let thumbNail = document.querySelector('.to')
+    thumbNail.style = 'opacity: 0; transition: 0.6s';
     }
 ) ;

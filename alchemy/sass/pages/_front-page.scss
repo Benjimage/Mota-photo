@@ -1,3 +1,24 @@
 /********************/
 /*    FRONT-PAGE    */
 /********************/
+.banner {
+    width: 100vw;
+    height: 88vh;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+}
+
+
+.photo-event {
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    z-index: 2;
+  }

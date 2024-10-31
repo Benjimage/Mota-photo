@@ -27,6 +27,17 @@
   font-style: normal;
   src: url("../fonts/poppins/Poppins-Light.woff2") format("woff2"), url("../fonts/poppins/Poppins-Light.woff") format("woff");
 }
+p {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.justified {
+  text-align: justify;
+}
+
 /****************/
 /*  Navigation  */
 /****************/
@@ -68,6 +79,7 @@ footer {
   justify-content: center;
   position: fixed;
   bottom: 0;
+  left: 0;
 }
 
 .footer-menu {
@@ -92,6 +104,7 @@ footer {
   color: #000;
 }
 
+.action,
 .contact {
   cursor: pointer;
 }
@@ -106,7 +119,7 @@ footer {
   display: none;
   justify-content: center;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   left: 0;
   top: 0;
   width: 100%;
@@ -182,6 +195,12 @@ textarea {
   margin: -5px 0 5px 0;
 }
 
+.btn:hover,
+#submit:hover {
+  background-color: rgba(136, 136, 136, 0.4941176471);
+  transition: 0.3s;
+}
+
 /********************/
 /*   SINGLE PHOTO   */
 /********************/
@@ -189,6 +208,11 @@ textarea {
   width: 1148px;
   margin: auto;
   padding-top: 40px;
+}
+@media (max-width: 769px) {
+  .main-content {
+    width: 80vw;
+  }
 }
 
 .top {
@@ -261,7 +285,7 @@ textarea {
   border-bottom: 1px solid #000;
 }
 
-.left {
+.left-box {
   width: 564px;
   display: flex;
   align-items: center;
@@ -281,9 +305,34 @@ textarea {
 
 .preview {
   width: 81px;
-  padding-top: 10px;
+  height: 112px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  top: 4px;
+}
+
+.prev {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 6px;
+}
+
+.next {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 6px;
+}
+
+.prev-thumbnail,
+.next-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .cmd {
@@ -291,12 +340,16 @@ textarea {
   justify-content: space-between;
   gap: 10px;
   height: 30px;
+  width: 81px;
   padding: 10px 0 2px 0;
+  position: absolute;
+  bottom: 0;
 }
 
 .miniature {
   max-height: fit-content;
   height: 71px;
+  width: 81px;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -305,14 +358,16 @@ textarea {
 .miniature img {
   max-height: 100%;
   object-fit: cover;
+  opacity: 0;
 }
 
-.left p {
-  font-family: Poppins;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 21px;
-  text-align: right;
+.arrow {
+  width: 38px;
+}
+
+.left,
+.right {
+  padding-right: 4px;
 }
 
 .bottom {
@@ -341,6 +396,30 @@ textarea {
   object-fit: cover;
   width: 564px;
   height: 495px;
+}
+
+/********************/
+/*    FRONT-PAGE    */
+/********************/
+.banner {
+  width: 100vw;
+  height: 88vh;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.photo-event {
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  z-index: 2;
 }
 
 /********************/
@@ -393,56 +472,53 @@ textarea {
 /********************/
 /* Special features */
 /********************/
-.prev {
-  width: 40px;
+.row {
   display: flex;
-  align-items: center;
-  justify-content: start;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 0 10vh 0;
+  gap: 20px;
 }
 
-.next {
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: end;
+.card {
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.06), 1px 2px 4px 0 rgba(0, 0, 0, 0.06);
+  padding: 20px 20px 60px 20px;
+  /* margin:20px; */
+  height: 54vh;
+  width: 18vw;
+}
+@media (max-width: 769px) {
+  .card {
+    width: 90%;
+  }
 }
 
-.left-arrow {
-  width: 8px;
-  height: 8px;
-  transform: rotate(-45deg);
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
-  position: relative;
+.card:hover {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transform: translateY(2px);
+  transition: 0.2s;
 }
 
-.left-arrow div {
-  width: 25px;
-  height: 1px;
-  border: 1px solid #000;
-  transform: rotate(45deg);
-  position: absolute;
-  top: 8px;
-  left: -4px;
+.card-link {
+  text-decoration: none;
+  color: #000;
 }
 
-.right-arrow {
-  width: 8px;
-  height: 8px;
-  transform: rotate(45deg);
-  border-top: 1px solid #000;
-  border-right: 1px solid #000;
-  position: relative;
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.right-arrow div {
-  width: 25px;
-  height: 1px;
-  border: 1px solid #000;
-  transform: rotate(-45deg);
-  position: absolute;
-  top: 8px;
-  right: -4px;
+.card-title {
+  font-size: 1rem;
+  letter-spacing: -0.04ch;
+  padding: 8px 0;
+  font-family: Space mono;
+}
+
+.card p {
+  padding: 6px 6px 6px 0;
 }
 
 /*# sourceMappingURL=theme.css.map */

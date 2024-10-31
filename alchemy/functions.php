@@ -1,18 +1,26 @@
 <?php
 require_once get_stylesheet_directory() . '/includes/photo-custom.php';
+
 /* Functions */
 
 function alchemy_supports (){
-    add_theme_support( 'post-thumbnails' );
+    add_theme_support('post-thumbnails');
     add_theme_support('title-tag');
     add_theme_support('menus');
-    add_theme_support( 'custom-logo', array('height' => 175,'width' => 400,'flex-width' => true,));
+    add_theme_support('custom-logo', array('height' => 175,'width' => 400,'flex-width' => true,));
 }
 
 function alchemy_enqueue_styles() { 
-	wp_enqueue_style( 'theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css')); 
-    wp_enqueue_script('modal-script', get_template_directory_uri() . '/js/modal.js', array(), filemtime(get_template_directory() . '/js/modal.js'), true);
+    wp_enqueue_script('jquery');
+    wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css')); 
+    wp_enqueue_script('photo-script', get_template_directory_uri() . '/js/photo.js', array('jquery'), true);
+    wp_enqueue_script('contact-script', get_template_directory_uri() . '/js/contact.js', array('jquery'), filemtime(get_template_directory() . '/js/contact.js'), true);
     wp_enqueue_script('thumbnail-script', get_template_directory_uri() . '/js/thumbnail.js', array(), filemtime(get_template_directory() . '/js/thumbnail.js'), true);
+} 
+
+function alchemy_localize_script() {
+    $reference_value = get_field('reference');
+    wp_localize_script('photo-script', 'referencePhoto', array('inputValue' => esc_js($reference_value)));
 }
 
 function register_alchemy_menu(){
@@ -49,7 +57,8 @@ function add_li_item( $items, $args){
  };  
  
 /* Actions */
-add_action( 'wp_enqueue_scripts', 'alchemy_enqueue_styles' ); 
+add_action('wp_enqueue_scripts', 'alchemy_enqueue_styles'); 
+add_action('wp_enqueue_scripts', 'alchemy_localize_script'); 
 add_action('after_setup_theme', 'alchemy_supports');
 add_action('after_setup_theme', 'register_alchemy_menu');
 

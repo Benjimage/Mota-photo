@@ -3,12 +3,15 @@
     display: flex;
     align-items: center;
     justify-content: start;
+    /* border: 1px solid rgb(206, 10, 231); */
 }
 .next {
     width:40px;
     display: flex;
     align-items: center;
     justify-content: end;
+    /* border: 1px solid rgb(31, 49, 211); */
+
 }
 .left-arrow {
     width: 8px;
@@ -17,8 +20,8 @@
     border-top: 1px solid #000;
     border-left: 1px solid #000;
     position: relative;
-   }
-   .left-arrow div{
+}
+.left-arrow div{
     width: 25px;
     height: 1px;
     border: 1px solid #000;
@@ -26,16 +29,16 @@
     position: absolute;
     top:8px;
     left:-4px;
-   }
-   .right-arrow {
+}
+.right-arrow {
     width: 8px;
     height: 8px;
     transform: rotate(45deg);
     border-top: 1px solid #000;
     border-right: 1px solid #000;
     position: relative;
-   }
-   .right-arrow  div{
+}
+.right-arrow  div{
     width: 25px;
     height: 1px;
     border: 1px solid #000;
@@ -43,4 +46,18 @@
     position: absolute;
     top:8px;
     right:-4px;
-   }
+}
+/* 
+ <div class="cmd">
+    <div class="prev">
+        <div class="left-arrow">
+            <div></div>
+        </div>
+    </div>
+    <div class="next">
+        <div class="right-arrow">                        
+            <div id="next"></div>                        
+        </div> 
+    </div>
+</div>
+*/

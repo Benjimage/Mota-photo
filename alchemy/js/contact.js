@@ -1,14 +1,11 @@
 const modal = document.querySelector(".modal");
-
 const contact = document.querySelector(".contact");
+const action = document.querySelector(".action");
 
-const contactFromPost = document.querySelector(".btn");
+contact.addEventListener('click', modalDisplay );
+action.addEventListener('click', modalDisplay );
 
-contact.onclick = () => {
-  modal.style.display = "flex";
-}
-
-contactFromPost.onclick = () => {
+function modalDisplay() {
   modal.style.display = "flex";
 }
 
@@ -17,4 +14,5 @@ window.onclick = (event) =>{
     modal.style.display = "none";
   }
 } 
+
 

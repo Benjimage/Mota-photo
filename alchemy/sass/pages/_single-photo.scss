@@ -5,6 +5,10 @@
     width: 1148px;
     margin: auto;
     padding-top: 40px;
+
+    @media (max-width:769px){
+      width: 80vw;
+    }
 }
 .top {
   display: flex;
@@ -69,7 +73,7 @@
   width: 100%;
   border-bottom: 1px solid #000;
 }
-.left {
+.left-box {
   width: 564px;
   display: flex;
   align-items: center;
@@ -87,37 +91,64 @@
 }
 .preview {
   width: 81px;
-  padding-top: 10px;
+  height:112px;
   display: flex;
   flex-direction: column;
-
+  position: relative;
+  top: 4px;
+}
+.prev {
+  width:40px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 6px;
+}
+.next {
+  width:40px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 6px;
+}
+.prev-thumbnail,
+.next-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .cmd {
   display: flex;
   justify-content: space-between;
   gap:10px;
   height: 30px;
+  width: 81px;
   padding:10px 0 2px 0;
+  position: absolute;
+  bottom: 0;
+
 }
 .miniature {
   max-height: fit-content;
   height: 71px;
+  width: 81px;
   display: flex;
   justify-content: center;
   overflow: hidden;
 }
-.miniature img {
+.miniature  img {
   max-height: 100%;
   object-fit:cover;
-}
-.left p {
-font-family: Poppins;
-font-size: 14px;
-font-weight: 300;
-line-height: 21px;
-text-align: right;
+  opacity: 0;
 }
 
+ .arrow {
+  width: 38px;
+ }
+ .left,
+ .right {
+  padding-right: 4px;
+ }
 .bottom {
   width: 100%;
   display: flex;
