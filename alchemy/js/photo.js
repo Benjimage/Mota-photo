@@ -5,20 +5,22 @@ jQuery(document).ready(function($) {
     $("#ref-photo").val(referencePhoto.inputValue);
     });
 
-   /*  $('.prev').mouseenter(function(){
+    $('.prev').on('mouseenter',function(){
         console.log('SURVOL !!!')
-        $('.back').fadeIn();
+        $('.back').fadeIn(600);
     });
-    $('.prev').mouseleave(function(){
+    $('.prev').on('mouseleave',function(){
         console.log('BYE !!!')
-        $('.back').fadeOut();
+        $('.back').fadeOut(600);
     });
-    $('.next').mouseenter(function(){
+    $('.next').on('mouseenter',function(){
         console.log('SURVOL !!!')
-        $('.to').fadeIn();
+        $('.to').fadeIn(600);
     });
-    $('.next').mouseleave(function(){
+    $('.next').on('mouseleave',function(){
         console.log('BYE !!!')
-        $('.to').fadeOut();
-    }); */
+        $('.to').fadeOut(600);
+    }); 
+
+    /* alert($('#toto').data('toto')); */
 });

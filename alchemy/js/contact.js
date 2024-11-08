@@ -1,18 +1,46 @@
-const modal = document.querySelector(".modal");
-const contact = document.querySelector(".contact");
-const action = document.querySelector(".action");
+// const modal = document.querySelector(".modal");
+// const contact = document.querySelectorAll(".contact");
+// // const action = document.querySelector(".action");
+// console.log('modal', modal);
+// console.log('contact', contact);
 
-contact.addEventListener('click', modalDisplay );
-action.addEventListener('click', modalDisplay );
+// for (let i = 0; i < contact.length; i++) {
+//   console.log('addeventlistener');
+//   contact[i].addEventListener('click', modalDisplay );
+// }
 
-function modalDisplay() {
-  modal.style.display = "flex";
-}
+// // contact.addEventListener('click', modalDisplay );
+// // action.addEventListener('click', modalDisplay );
 
-window.onclick = (event) =>{
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-} 
+// function modalDisplay() {
+//   console.log('modalDisplay');
+//   modal.style.display = "flex";
+// }
+
+// modal.onclick = (event) =>{
+//   console.log('modal click');
+//   if (event.target == modal) {
+//     console.log('modal none');
+//     modal.style.display = "none";
+//   }
+// } 
+
+(function($){
+
+  $('.contact').each(function(){
+    $(this).on('click', function(){
+     $('.modal').css('display', 'flex');
+    });
+  });
+
+  $('.modal').on('click', function(event){
+    console.log(this);
+    if(event.target == this){
+      $(this).css('display', 'none');
+    }
+  });
+
+
+})(jQuery);
 
 

@@ -23,8 +23,27 @@
             esc_html_e('Désolé, aucune publication ne répond à votre requête.');
         }
         wp_reset_postdata();
-  
-        the_content();
+        get_template_part('template-parts/catalog');
+        /* $args = array(
+            'post_type' => 'photo',
+            'posts_per_page' => 10,
+            'orderby' => 'ASC',
+        );
+        $catalog = new WP_Query($args);
+        if($catalog->have_posts()){
+            echo '<div class="main-content">
+                        <div class="bottom">';
+        while ($catalog->have_posts()) {
+            echo '<div class="card">';
+                $catalog->the_post();
+                echo get_the_post_thumbnail(null, 'post-thumbnail', array('class' => 'card-img'));
+                echo '</div>'; 
+                }
+            echo '</div>
+            </div>';
+        }
+        wp_reset_postdata(); */
+    the_content();
     endwhile;
 else :
     echo '<p>No content found</p>';

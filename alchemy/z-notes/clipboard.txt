@@ -194,3 +194,9 @@ PREVIEW
                             </a>
                         </div>
                     </div>
+
+
+                     height: calc(14.16vw * 0.183);
+  height: calc(79.722 * 1.33);
+
+calc(31.09375vw * 1.8)

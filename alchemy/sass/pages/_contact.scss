@@ -5,17 +5,17 @@
     display: none; 
     justify-content: center;
     position: fixed; 
-    z-index: 999; 
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%; 
     overflow: auto; 
     background-color:rgba(0,0,0,0.4);
-    -webkit-animation-name: fadeIn; 
+    -webkit-animation-name: fadeIn ; 
     -webkit-animation-duration: 0.4s;
-    animation-name: fadeIn;
-    animation-duration: 0.4s
+    animation-name: fadeIn ;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
   }
 
   .contact-header {
@@ -27,21 +27,37 @@
 
   img {
     height: 106px;
+    @media (max-width: 1279px) {
+    /* height: calc(31.09375vw * 0.18); */
+    height: 70px;
+    }
+    @media (max-width: 767px) {
+      }
   }
 
   .contact-form {
-    width: 597px;
-    height: 769px;
+    /* width: 597px 31.09375vw; */
     position: fixed;
     bottom: 0;
     border: 5px solid #000;
     background-color: #fefefe;
-    margin: 7% auto;
-    padding: 10px 0 ;
+    margin: 6% auto;
+    padding: 0.5208333333333334vw 0 ;
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
+    @media (min-width: 1280px) {
+      width: 597px;
+      height: 769px; 
+    }
+    /* @media (max-width: 1279px) {
+      width: 60vw;
+      } */
+    @media (max-width: 768px) {
+      width: 360px;
+      height: 680px;
+    }
   }
 
   form {
@@ -53,6 +69,11 @@
     /* justify-content: center; */
     align-items: center;
     gap: 20px;
+   /*  @extend %border-marking; */
+    @media (max-width: 1279px) {
+      padding: 2.0833333333333335vw 20px 0px 20px;
+
+    }
   }
   label {
     font-family: Arial, Helvetica, sans-serif;

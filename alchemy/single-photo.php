@@ -11,7 +11,7 @@
                                 <h2 class="single-photo-title"><?php the_title();?></h2>
                             </div>
                             <ul>
-                                <li>Référence : <?php echo get_field('reference'); ?></li>
+                                <li id="toto" data-toto="<?= get_field('reference'); ?>">Référence : <?php echo get_field('reference'); ?></li>
                                 <li>Catégorie : <?php echo strip_tags(get_the_term_list( $post->ID, 'categories-photos' )); ?></li>
                                 <li>Format : <?php echo strip_tags(get_the_term_list( $post->ID, 'format' )); ?></li>
                                 <li>Type: <?php echo get_field( 'type'); ?></li>
@@ -23,39 +23,57 @@
                            <?php the_post_thumbnail();?>
                         </figure>
                 </div>
-
+<?php 
+    $next = get_next_post();
+    $prev = get_previous_post();
+?>
                 <div class="middle">
                     <div class="left-box">
                         <p>Cette photo vous intéresse ?</p>
-                        <div class="btn action">Contact</div>
+                        <div class="btn contact action">Contact</div>
                     </div>
                     <div class="preview">
                     <div class="miniature prev-thumbnail">
-                        <?php echo get_the_post_thumbnail( get_previous_post(), 'post-thumbnail', array('class' => 'back') ); ?> 
+                        <?php 
+                            if($prev) {
+                                echo get_the_post_thumbnail( $prev, 'post-thumbnail', array('class' => 'back') ); 
+                            } else {
+                                echo '';
+                            }    
+                        ?> 
                         </div>
                         <div class="miniature next-thumbnail">
                         <?php 
-                        if(is_single('team-mariee')){
-                            echo '';
-                        } else {
-                            echo get_the_post_thumbnail( get_next_post(), 'post-thumbnail', array('class' => 'to') ); 
-                        }
+                            if($next){
+                                echo get_the_post_thumbnail( $next, 'post-thumbnail', array('class' => 'to') ); 
+                            } else {
+                                echo '';
+                            }
+                        // if(is_single('team-mariee')){
+                        //     echo '';
+                        // } else {
+                        //     echo get_the_post_thumbnail( get_next_post(), 'post-thumbnail', array('class' => 'to') ); 
+                        // }
                         ?> 
                         </div>
                         <div class="cmd">
-                            <a href="<?php echo get_the_permalink(get_previous_post())?>" class="prev">
-                                <img src="<?php echo get_template_directory_uri() ."/assets/icones/left-arrow.svg"?>" class="arrow left">
-                            </a>
-                            <a href="<?php echo get_the_permalink(get_next_post())?>" class="next">
-                                <img src="<?php echo get_template_directory_uri() ."/assets/icones/right-arrow.svg"?>" class="arrow right">
-                            </a>
+                            <?php if($prev) { ?>
+                                <a href="<?php echo get_the_permalink($prev)?>" class="prev">
+                                    <img src="<?php echo get_template_directory_uri() ."/assets/icones/left-arrow.svg"?>" class="arrow left">
+                                </a>
+                            <?php } ?>
+                            <?php if($next) { ?>
+                                <a href="<?php echo get_the_permalink($next)?>" class="next">
+                                    <img src="<?php echo get_template_directory_uri() ."/assets/icones/right-arrow.svg"?>" class="arrow right">
+                                </a>
+                            <?php } ?>
+                            
                         </div>
                     </div>
                 </div>
 
+                
                 <div class="bottom">
-                    <h6 class="bottom-title">VOUS AIMEREZ AUSSI</h6>
-                    <div class="liked">
                     <?php 
                         $args = array(
                             'post_type' => 'photo',
@@ -72,16 +90,25 @@
                         );
 
                         $photos = new WP_Query($args);
-                        if($photos->have_posts()):
+                        
+                        if($photos->have_posts()) {
+                    ?>
+                        <h6 class="bottom-title">VOUS AIMEREZ AUSSI</h6>
+                        <div class="liked">
+                        <?php 
+                        
                             while($photos->have_posts()): $photos->the_post();
-                            echo '<a href="'. get_the_permalink(). '">'  . get_the_post_thumbnail(null, 'full', array('class'=>'liked-img')) . '</a>';
-                        endwhile;
-                    else: 
-                        echo '<p>Il n\'y pas d\'autre image dans cette catégorie.</p>';
-                        endif;
-                        wp_reset_postdata();
-                        ?> 
-                    </div>
+                                echo '<a href="'. get_the_permalink(). '">'  . get_the_post_thumbnail(null, 'full', array('class'=>'liked-img')) . '</a>';
+                            endwhile;
+                            
+                            ?> 
+                        </div>
+                    <?php } else { ?>
+                        <h6 class="bottom-title">AUCUNE IMAGE SIMILAIRE</h6>
+                    <?php 
+                        } 
+                        wp_reset_postdata(); 
+                    ?>
                 </div>
             </div>
     </main>
