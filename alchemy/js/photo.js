@@ -22,5 +22,5 @@ jQuery(document).ready(function($) {
         $('.to').fadeOut(600);
     }); 
 
-    /* alert($('#toto').data('toto')); */
+    
 });

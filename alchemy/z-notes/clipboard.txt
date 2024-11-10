@@ -200,3 +200,6 @@ PREVIEW
   height: calc(79.722 * 1.33);
 
 calc(31.09375vw * 1.8)
+
+
+alert($('#toto').data('toto'));

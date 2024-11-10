@@ -11,7 +11,7 @@
                                 <h2 class="single-photo-title"><?php the_title();?></h2>
                             </div>
                             <ul>
-                                <li id="toto" data-toto="<?= get_field('reference'); ?>">Référence : <?php echo get_field('reference'); ?></li>
+                                <li>Référence : <?php echo get_field('reference'); ?></li>
                                 <li>Catégorie : <?php echo strip_tags(get_the_term_list( $post->ID, 'categories-photos' )); ?></li>
                                 <li>Format : <?php echo strip_tags(get_the_term_list( $post->ID, 'format' )); ?></li>
                                 <li>Type: <?php echo get_field( 'type'); ?></li>
@@ -30,7 +30,7 @@
                 <div class="middle">
                     <div class="left-box">
                         <p>Cette photo vous intéresse ?</p>
-                        <div class="btn contact action">Contact</div>
+                        <div class="btn contact">Contact</div>
                     </div>
                     <div class="preview">
                     <div class="miniature prev-thumbnail">
@@ -49,11 +49,6 @@
                             } else {
                                 echo '';
                             }
-                        // if(is_single('team-mariee')){
-                        //     echo '';
-                        // } else {
-                        //     echo get_the_post_thumbnail( get_next_post(), 'post-thumbnail', array('class' => 'to') ); 
-                        // }
                         ?> 
                         </div>
                         <div class="cmd">

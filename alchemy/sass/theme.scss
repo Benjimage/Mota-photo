@@ -27,12 +27,14 @@
 /********************/
 @import 'animation/keyframes';
 /********************/
+/* Special features */
+/********************/
+@import 'special-features/card';
+@import 'special-features/catalog';
+@import 'special-features/lightbox';
+
+/********************/
 /*  ??????????????  */
 /********************/
 /* @import ''; */
 /* @import 'presets/mixins'; */
-/********************/
-/* Special features */
-/********************/
-//@import 'special-features/arrows';
-@import 'special-features/card';

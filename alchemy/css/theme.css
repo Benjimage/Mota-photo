@@ -238,6 +238,9 @@ textarea {
   } */
 }
 
+/********************/
+/*   TOP SECTION    */
+/********************/
 .top {
   display: flex;
   justify-content: space-between;
@@ -310,6 +313,9 @@ textarea {
 }
 
 /* ==================================================================== */
+/********************/
+/*      MIDDLE      */
+/********************/
 .middle {
   height: 7.2916666667vw;
   padding: 8px 0;
@@ -408,11 +414,10 @@ textarea {
   width: 2.5vw;
 }
 
-/* ========================================= */
-/*  .left,
- .right {
-  padding-right: 10px;
- } */
+/* ================================================================ */
+/********************/
+/*      BOTTOM      */
+/********************/
 .bottom {
   width: 100%;
   display: flex;
@@ -449,25 +454,6 @@ textarea {
 /********************/
 /*    FRONT-PAGE    */
 /********************/
-/* .banner {
-    width: 100vw;
-    height: 88vh;
-}
-
-.banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-}
-
-
-.photo-event {
-    object-fit: contain;
-    position: absolute;
-    top: 50%;
-    left: 12%;
-  } */
 .banner {
   width: 100vw;
   height: 88vh;
@@ -532,11 +518,6 @@ textarea {
     opacity: 1;
   }
 }
-/********************/
-/*  ??????????????  */
-/********************/
-/* @import ''; */
-/* @import 'presets/mixins'; */
 /********************/
 /* Special features */
 /********************/
@@ -607,25 +588,22 @@ textarea {
   gap: 1.2vw;
 }
 
+.photo-bloc {
+  position: relative;
+  width: 39.2vw;
+  height: 35.28vw;
+}
+
 .card-grid {
   padding: 0;
   position: relative;
+  width: 30%;
+  height: 20vw;
 }
-
 .card-grid img {
   object-fit: cover;
   width: 39.2vw;
   height: 35.28vw;
-}
-
-.above {
-  width: 39.2vw;
-  height: 35.28vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.4862745098);
-  z-index: 3;
 }
 
 .action {
@@ -635,5 +613,69 @@ textarea {
 .filter {
   display: flex;
 }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay .icons {
+  opacity: 0;
+}
+.overlay .icons img {
+  object-fit: cover;
+  height: 30px;
+}
+.overlay .fullscreen-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.photo-bloc:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.photo-bloc:hover .icons {
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  justify-content: center;
+  align-items: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #FFFFFF;
+  border: none;
+}
+
+/********************/
+/*  ??????????????  */
+/********************/
+/* @import ''; */
+/* @import 'presets/mixins'; */
 
 /*# sourceMappingURL=theme.css.map */
