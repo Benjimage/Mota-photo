@@ -656,8 +656,14 @@ textarea {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5019607843);
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+#lightbox a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: Space Mono;
 }
 
 .close-button {
@@ -682,13 +688,14 @@ textarea {
   justify-content: space-between;
 }
 
-span {
+.data span {
   color: #fff;
   text-transform: uppercase;
 }
 
-.nav-lightbox:hover {
-  cursor: pointer;
+.nav-lightbox {
+  height: 18px;
+  width: 92px;
 }
 
 #prev-img {
