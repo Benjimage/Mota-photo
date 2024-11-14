@@ -672,6 +672,41 @@ textarea {
   border: none;
 }
 
+.img-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+}
+
+span {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.nav-lightbox:hover {
+  cursor: pointer;
+}
+
+#prev-img {
+  margin-left: 40px;
+}
+
+#prev-img:hover {
+  margin-left: 31px;
+}
+
+#next-img {
+  margin-right: 40px;
+}
+
+#next-img:hover {
+  margin-right: 31px;
+}
+
 /********************/
 /*  ??????????????  */
 /********************/

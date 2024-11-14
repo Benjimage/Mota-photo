@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lightbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <img src="images/Logo.svg" class="menu-img">
+            <nav>
+                <ul>
+                    <li>Accueil</li>
+                    <li>À propos</li>
+                    <li id="contact" class="contact">Contact</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="catalog">
+        <div class="frame">
+            <div class="photo-bloc">
+                <div class="card-grid">
+                    <img id="img1" src="images/nathalie-10.jpeg" alt="" data-reference="bf2389" data-categorie="télévision">
+                </div>
+                <div class="overlay">
+                    <div class="icons eye-icon">
+                        <a href="">
+                            <img src="images/Icon_eye.svg" alt="Voir la photo">                            
+                        </a>
+                    </div>
+                    <div class="icons fullscreen-icon">
+                        <img src="images/Icon_fullscreen.svg" alt="Ouvrir la lightbox">                            
+                    </div>
+                </div>
+            </div> 
+            <div class="photo-bloc">
+                <div class="card-grid">
+                    <img id="img2" src="images/nathalie-11.jpeg" alt="" data-reference="bf2392" data-categorie="concert">
+                </div>
+                <div class="overlay">
+                    <div class="icons eye-icon">
+                        <a href="">
+                            <img src="images/Icon_eye.svg" alt="Voir la photo">                            
+                        </a>
+                    </div>
+                    <div class="icons fullscreen-icon">
+                        <img src="images/Icon_fullscreen.svg" alt="Ouvrir la lightbox">                            
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="btn contact action">Charger plus</div>
+    </div>
+    <div id="lightbox" data-src="test" data-id="" data-reference="bf2389" data-categorie="télévision">
+        <div class="close-button">&#10539;</div>
+        <a href="https://localhost/1-home/ProjetOC/1-Mota-photo/">
+            <img class="nav-lightbox" id="prev-img" src="images/prev-img.svg" alt="">
+        </a>
+            <div class="img-container">
+                <img src="images/nathalie-10.jpeg" width="800" alt="">
+                <div class="data">
+                <span class="reference-img"></span>
+                <span class="categorie-img"></span>
+                </div>
+            </div>
+        <a href="https://localhost/1-home/ProjetOC/1-Mota-photo/">
+            <img class="nav-lightbox" id="next-img" src="images/next-img.svg" alt="">
+        </a>
+    </div>
+   
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="script.js"></script>
+</body>
+<footer>
+   
+</footer>
+</html>
