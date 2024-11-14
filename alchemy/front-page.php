@@ -33,3 +33,14 @@ endif;
 ?>
 
 <?php get_footer() ?>
+
+<?php 
+
+/*
+    1. listes déroulantes select1 (categories) 
+    2. select1.on('change', function(event) {
+    
+        -> appel AJAX -> wp_ajax_... -> WP_QUERY (categorie = ???) -> Mis en page avec JQuery 
+    
+    })
+*/

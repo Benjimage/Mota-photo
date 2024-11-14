@@ -1,16 +1,4 @@
-<?php
-$args = array(
-    'post_type' => 'photo',
-    'posts_per_page' => 10,
-    'orderby' => 'rand',
-);
-$catalog = new WP_Query($args);
-if ($catalog->have_posts()) { ?>
-    <div class="catalog">
-        <div class="frame">
-            <?php $compteur = 0; ?>
-            <?php while ($catalog->have_posts()) { ?>
-                <div class="photo-bloc" data-id="<?php echo get_the_ID(); ?>">
+<div class="photo-bloc" data-id="<?php echo get_the_ID(); ?>">
                     <div class="card-grid">
                         <?php $catalog->the_post(); ?>
                         <?php echo get_the_post_thumbnail(null, 'post-thumbnail', array('class' => 'no'));  ?>
@@ -31,16 +19,3 @@ if ($catalog->have_posts()) { ?>
                         </div>
                     </div>
                 </div>    
-            <?php } ?>
-        </div>
-        <div class="btn contact action">Charger plus</div>
-    </div>
-<?php
-}
-wp_reset_postdata();
-?>
-
-<?php
-
-
-
