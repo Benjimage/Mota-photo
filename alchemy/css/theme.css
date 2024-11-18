@@ -655,7 +655,7 @@ textarea {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 40px;
+  /* padding: 40px; */
   background-color: rgba(0, 0, 0, 0.8823529412);
   justify-content: space-between;
   align-items: center;
@@ -683,6 +683,10 @@ textarea {
   width: 100%;
 }
 
+.paysage {
+  width: 60%;
+}
+
 .data {
   display: flex;
   justify-content: space-between;
@@ -693,25 +697,53 @@ textarea {
   font-family: Space Mono;
 }
 
-.nav-lightbox {
-  height: 18px;
-  width: 92px;
+#left-arrow {
+  margin-left: 40px;
 }
 
-#prev-img {
-  width: 98px;
-  margin-left: -8px;
-}
-
-/* #prev-img:hover {
-margin-left: 31px;
-} */
-/* #next-img {
+#right-arrow {
   margin-right: 40px;
-} */
-/* #next-img:hover {
-  margin-right: 31px;
-} */
+}
+
+.nav-lightbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  font-family: Space Mono;
+}
+
+.to-prev {
+  order: 1;
+  padding-left: 8px;
+}
+
+.to-next {
+  padding-right: 8px;
+}
+
+.to-prev:hover {
+  font-weight: bold;
+  padding-left: 6px;
+  padding-top: 0px;
+}
+
+.to-prev:hover + #left-arrow {
+  margin-left: 26px;
+  width: 46px;
+}
+
+.to-next:hover {
+  font-weight: bold;
+  padding-right: 4px;
+  padding-top: 0px;
+}
+
+.to-next:hover + #right-arrow {
+  margin-right: 28px;
+  width: 46px;
+}
+
 /********************/
 /*  ??????????????  */
 /********************/

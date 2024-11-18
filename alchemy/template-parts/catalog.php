@@ -13,7 +13,7 @@ if ($catalog->have_posts()) { ?>
                 <div class="photo-bloc" data-id="<?php echo get_the_ID(); ?>">
                     <div class="card-grid">
                         <?php $catalog->the_post(); ?>
-                        <?php echo get_the_post_thumbnail(null, 'post-thumbnail', array('class' => 'no'));  ?>
+                        <?php echo get_the_post_thumbnail(null, 'post-thumbnail', array(/* 'class' => 'no' */));  ?>
                     </div>
                     <div class="overlay">
                         <div class="icons eye-icon">
@@ -24,6 +24,7 @@ if ($catalog->have_posts()) { ?>
                         <div class="icons fullscreen-icon" 
                             data-img-src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" 
                             data-ref="<?php echo get_post_field('reference'); ?>" 
+                            data-format ="<?php echo strip_tags(get_the_term_list( $post->ID,'format')); ?>" 
                             data-cat="<?php echo strip_tags(get_the_term_list( $post->ID, 'categories-photos' )); ?>"
                             data-id="<?php echo $compteur++; ?>"
                             >
