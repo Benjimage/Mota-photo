@@ -216,3 +216,28 @@ alert($('#toto').data('toto'));
     </div>
         <img class="nav-lightbox" id="next-img" src="<?php echo get_template_directory_uri() . "/assets/icones/next-img.svg" ?>" alt="">
 </div>
+
+/*   $('#prev-img').on('mouseenter',function(){
+      $('#prev-img').attr('src','https://localhost/1-home/ProjetOC/1-Mota-photo/wp-content/themes/alchemy/assets/icones/prev-hover.svg');
+    });
+    
+    $('#prev-img').on('mouseleave',function(){
+      $('#prev-img').attr('src','https://localhost/1-home/ProjetOC/1-Mota-photo/wp-content/themes/alchemy/assets/icones/prev-img.svg');
+    });
+    
+    $('#next-img').on('mouseenter',function(){
+      $('#next-img').attr('src','https://localhost/1-home/ProjetOC/1-Mota-photo/wp-content/themes/alchemy/assets/icones/next-hover.svg');
+    });
+    $('#next-img').on('mouseleave',function(){
+      $('#next-img').attr('src','https://localhost/1-home/ProjetOC/1-Mota-photo/wp-content/themes/alchemy/assets/icones/next-img.svg');
+    }); */
+
+    <select name="formats">
+  <option value="Formats" selected disabled>Formats</option>
+  <?php
+  $formats = get_terms('format');
+  foreach($formats as $format) {
+    echo '<option value="' . $format->slug . '">' . $format->name . '</option>';
+  }
+  ?>
+</select>

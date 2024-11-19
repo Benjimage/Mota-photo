@@ -16,6 +16,7 @@ function alchemy_enqueue_styles() {
     wp_enqueue_script('photo-script', get_template_directory_uri() . '/js/photo.js', array('jquery'), true);
     wp_enqueue_script('contact-script', get_template_directory_uri() . '/js/contact.js', array('jquery'), filemtime(get_template_directory() . '/js/contact.js'), true);
     wp_enqueue_script('lightbox-script', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), filemtime(get_template_directory() . '/js/lightbox.js'), true);
+    wp_enqueue_script('filter-script', get_template_directory_uri() . '/js/filters.js', array('jquery'), filemtime(get_template_directory() . '/js/filters.js'), true);
 } 
 
 function alchemy_localize_script() {

@@ -1,6 +1,6 @@
 <div class="photo-bloc" data-id="<?php echo get_the_ID(); ?>">
                     <div class="card-grid">
-                        <?php $catalog->the_post(); ?>
+                        <?php /* $catalog->the_post(); */ ?>
                         <?php echo get_the_post_thumbnail(null, 'post-thumbnail', array('class' => 'no'));  ?>
                     </div>
                     <div class="overlay">

@@ -93,8 +93,8 @@
                         <?php 
                         
                             while($photos->have_posts()): $photos->the_post();
-                                echo '<a href="'. get_the_permalink(). '">'  . get_the_post_thumbnail(null, 'full', array('class'=>'liked-img')) . '</a>';
-                               /* get_template_part('template-parts/photo-bloc'); */
+                               //echo '<a href="'. get_the_permalink(). '">'  . get_the_post_thumbnail(null, 'full', array('class'=>'liked-img')) . '</a>';
+                               get_template_part('template-parts/photo-bloc');
                             endwhile;
                             
                             ?> 

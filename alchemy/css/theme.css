@@ -684,7 +684,11 @@ textarea {
 }
 
 .paysage {
-  width: 60%;
+  width: 60vw;
+}
+
+.portrait {
+  width: 50vw;
 }
 
 .data {
@@ -742,6 +746,33 @@ textarea {
 .to-next:hover + #right-arrow {
   margin-right: 28px;
   width: 46px;
+}
+
+select {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 6px;
+  text-transform: uppercase;
+  /* & > option {
+
+      background-color: #f70606 !important;
+      color: #ffffff !important;
+      display: none;
+  } */
+}
+
+select[name=categorie],
+select[name=formats] {
+  width: 48%;
+}
+
+select[name=date] {
+  width: 25%;
+}
+
+.less {
+  border: none;
 }
 
 /********************/

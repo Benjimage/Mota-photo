@@ -6,7 +6,7 @@ $args = array(
 );
 $catalog = new WP_Query($args);
 if ($catalog->have_posts()) { ?>
-    <div class="catalog">
+    <!-- <div class="catalog"> -->
         <div class="frame">
             <?php $compteur = 0; ?>
             <?php while ($catalog->have_posts()) { ?>
@@ -35,7 +35,7 @@ if ($catalog->have_posts()) { ?>
             <?php } ?>
         </div>
         <div class="btn contact action">Charger plus</div>
-    </div>
+    <!-- </div> -->
 <?php
 }
 wp_reset_postdata();
