@@ -84,19 +84,20 @@
                             )
                         );
 
-                        $photos = new WP_Query($args);
+                        $catalog = new WP_Query($args);
                         
-                        if($photos->have_posts()) {
+                        if($catalog->have_posts()) {
                     ?>
                         <h6 class="bottom-title">VOUS AIMEREZ AUSSI</h6>
                         <div class="liked">
                         <?php 
-                        
-                            while($photos->have_posts()): $photos->the_post();
-                               //echo '<a href="'. get_the_permalink(). '">'  . get_the_post_thumbnail(null, 'full', array('class'=>'liked-img')) . '</a>';
-                               get_template_part('template-parts/photo-bloc');
+                            $compteur=0;
+                            while($catalog->have_posts()): 
+                                get_template_part('template-parts/photo', 'bloc', array(
+                                    'compteur' => $compteur, 
+                                    'catalog' => $catalog
+                                ));
                             endwhile;
-                            
                             ?> 
                         </div>
                     <?php } else { ?>

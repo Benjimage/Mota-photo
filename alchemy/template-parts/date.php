@@ -31,3 +31,12 @@
   wp_reset_postdata();
   ?>
 </select>
+
+<!-- 
+<select>
+  <option value="DESC">Trier par date</option>
+  <option value="DESC">De la plus récente à la plus ancienne</option>
+  <option value="ASC">De la plus ancienne à la plus récente</option>
+</select> -->
+
+<!-- orderby : date , order : ASC | DESC -->

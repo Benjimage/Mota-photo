@@ -754,12 +754,14 @@ select {
   border: 1px solid #000;
   border-radius: 6px;
   text-transform: uppercase;
-  /* & > option {
-
-      background-color: #f70606 !important;
-      color: #ffffff !important;
-      display: none;
-  } */
+}
+select:hover {
+  border: 2px solid #7498ff;
+}
+select > option {
+  padding: 10px;
+  background-color: #f70606 !important;
+  color: #ffffff !important;
 }
 
 select[name=categorie],

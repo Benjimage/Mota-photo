@@ -23,6 +23,9 @@
             esc_html_e('Désolé, aucune publication ne répond à votre requête.');
         }
         wp_reset_postdata(); ?>
+
+        <!-- Contenu principal -->
+
         <div class="catalog">
             <div class="middle less">
                 <div class="left-box">
@@ -31,25 +34,29 @@
                 </div>
                 <?php get_template_part('template-parts/date'); ?>
             </div>
-            <?php get_template_part('template-parts/catalog'); ?>
+            <?php 
+                $args = array(
+                    'post_type' => 'photo',
+                    'posts_per_page' => 10,
+                    'orderby' => 'rand',
+                );
+                $catalog = new WP_Query($args);
+                if ($catalog->have_posts()) : 
+                    echo('<div class="frame">');
+                    $compteur = 0;
+                    while ($catalog->have_posts()) { 
+                        get_template_part('template-parts/photo', 'bloc', array(
+                            'compteur' => $compteur, 
+                            'catalog' => $catalog
+                        ));
+                        $compteur++;
+                    } 
+                    echo('</div>');
+                else:
+                    echo '<p>No content found</p>';
+                endif;
+                wp_reset_postdata(); 
+            ?>
         </div>
-<?php
-        the_content();
-    endwhile;
-else :
-    echo '<p>No content found</p>';
-endif;
-?>
-
-<?php get_footer() ?>
-
-<?php 
-
-/*
-    1. listes déroulantes select1 (categories) 
-    2. select1.on('change', function(event) {
-    
-        -> appel AJAX -> wp_ajax_... -> WP_QUERY (categorie = ???) -> Mis en page avec JQuery 
-    
-    })
-*/
+<?php endwhile;endif; ?>
+<?php get_footer(); ?>

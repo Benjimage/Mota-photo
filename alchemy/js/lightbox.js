@@ -5,6 +5,18 @@
 
     function affiche_image() {
         let image_courante = lightboxList[id_image_courante];
+
+        // if(image_courante === 0) {
+        //     $('#prev-img').hide();
+        // } else {
+        //     $('#prev-img').show();
+        // }
+
+        // if(id_image_courante === lightboxList.length - 1) {
+        //     $('#next-img').hide();
+        // } else {
+        //     $('#next-img').show();
+        // }
         
         $('.reference-img').html(image_courante.ref);
         $('.categorie-img').html(image_courante.cat);
@@ -38,17 +50,17 @@
         affiche_image();
         
         console.log($(id_image_courante));
-        if( id_image_courante === 0 ) {
-            $('#prev-img').hide();
-        } else {
-            $('#prev-img').show();
-        }
+        // if( id_image_courante === 0 ) {
+        //     $('#prev-img').hide();
+        // } else {
+        //     $('#prev-img').show();
+        // }
 
-        if(id_image_courante === lightboxList.length - 1) {
-            $('#next-img').hide();
-        } else {
-            $('#next-img').show();
-        }
+        // if(id_image_courante === lightboxList.length - 1) {
+        //     $('#next-img').hide();
+        // } else {
+        //     $('#next-img').show();
+        // }
 
     });
 
