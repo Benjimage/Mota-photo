@@ -27,13 +27,14 @@
         <!-- Contenu principal -->
 
         <div class="catalog">
-            <div class="middle less">
-                <div class="left-box">
-                    <?php get_template_part('template-parts/categorie'); ?>
-                    <?php get_template_part('template-parts/formats'); ?>
-                </div>
-                <?php get_template_part('template-parts/date'); ?>
-            </div>
+            <!-- <div class="middle less">
+                <div class="left-box"> -->
+                    <?php /*  get_template_part('template-parts/categorie'); */ ?>
+                    <?php /* get_template_part('template-parts/formats'); */ ?>
+                <!-- </div> -->
+                <?php get_template_part('template-parts/filters');/* get_template_part('template-parts/date'); */ ?>
+            <!-- </div> -->
+            
             <?php 
                 $args = array(
                     'post_type' => 'photo',
