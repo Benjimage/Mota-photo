@@ -2,8 +2,6 @@
 var x = $(".custom-select");
   var l = x.length;
 
-console.log($(".custom-select"));
-
   for (var i = 0; i < l; i++) {
       var selElmnt = $(x[i]).find("select").first();
       var ll = selElmnt.find("option").length;
@@ -52,5 +50,14 @@ console.log($(".custom-select"));
           }
       });
   }
-
+ /*  console.log($('.select-selected').html());
+  $('.select-selected').on('click', function(){
+    $value = $('.select-selected').html();
+    console.log($value)
+  }) */
+    $('.select-selected').each(function(){
+        $(this).on('click', function(){
+            console.log($('.select-selected').html());
+        });
+      });
 })(jQuery);

@@ -5,18 +5,6 @@
 
     function affiche_image() {
         let image_courante = lightboxList[id_image_courante];
-
-        // if(image_courante === 0) {
-        //     $('#prev-img').hide();
-        // } else {
-        //     $('#prev-img').show();
-        // }
-
-        // if(id_image_courante === lightboxList.length - 1) {
-        //     $('#next-img').hide();
-        // } else {
-        //     $('#next-img').show();
-        // }
         
         $('.reference-img').html(image_courante.ref);
         $('.categorie-img').html(image_courante.cat);
@@ -43,29 +31,14 @@
 
     $(document).on('click', '.fullscreen-icon', function() {
         $('#lightbox').css("display", "flex");
-
-
+        
         id_image_courante = $(this).data('id');
         
         affiche_image();
-        
-        console.log($(id_image_courante));
-        // if( id_image_courante === 0 ) {
-        //     $('#prev-img').hide();
-        // } else {
-        //     $('#prev-img').show();
-        // }
-
-        // if(id_image_courante === lightboxList.length - 1) {
-        //     $('#next-img').hide();
-        // } else {
-        //     $('#next-img').show();
-        // }
-
+    
     });
 
-    $('#next-img').on('click', function(/* e */) {
-        //e.preventDefault();
+    $('#next-img').on('click', function() {
         if( id_image_courante === lightboxList.length -1) {
             id_image_courante=0;
         } else {
@@ -74,8 +47,7 @@
         affiche_image();
     });
 
-    $('#prev-img').on('click', function(/* e */) {
-        //e.preventDefault();
+    $('#prev-img').on('click', function() {
         if(id_image_courante === 0) {
             id_image_courante = lightboxList.length -1;
         } else {

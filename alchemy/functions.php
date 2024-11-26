@@ -18,14 +18,12 @@ function alchemy_enqueue_styles() {
     wp_enqueue_script('lightbox-script', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), filemtime(get_template_directory() . '/js/lightbox.js'), true);
     wp_enqueue_script('filter-script', get_template_directory_uri() . '/js/filters.js', array('jquery'), filemtime(get_template_directory() . '/js/filters.js'), true);
 } 
-/* function enqueue_select2() {
-    wp_enqueue_style('select2-css', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css');
-    wp_enqueue_script('select2-js', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js', array('jquery'), null, true);
-}
- */
+
 function alchemy_localize_script() {
     $reference_value = get_post_field('reference');
     wp_localize_script('photo-script', 'referencePhoto', array('inputValue' => esc_js($reference_value)));
+    wp_localize_script('filter-script','filter',array());
+
 }
 
 function register_alchemy_menu(){
@@ -62,7 +60,6 @@ function add_li_item( $items, $args){
  };  
  
 /* Actions */
-/* add_action('wp_enqueue_scripts', 'enqueue_select2'); */
 add_action('wp_enqueue_scripts', 'alchemy_enqueue_styles'); 
 add_action('wp_enqueue_scripts', 'alchemy_localize_script'); 
 add_action('after_setup_theme', 'alchemy_supports');

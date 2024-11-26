@@ -748,29 +748,6 @@ textarea {
   width: 46px;
 }
 
-/* select {
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #000;
-    border-radius: 6px;
-    text-transform: uppercase;
-    &:hover {
-        border: 2px solid #7498ff;
-    }
-    & > option {
-        padding: 10px;
-        background-color: #f70606 !important;
-        color: #ffffff !important;
-        //display: none;
-    }
-}
-select[name='categorie'],
-select[name='formats'] {
-    width: 48%;
-}
-select[name='date'] {
-   width: 25%;
-} */
 .less {
   border: none;
 }

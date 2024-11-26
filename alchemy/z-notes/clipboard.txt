@@ -241,3 +241,11 @@ alert($('#toto').data('toto'));
   }
   ?>
 </select>
+
+=============================
+  $('.select-selected').each(function(){
+ /*  $(this).on('click', function(){
+    $value = $('.select-selected').html(); */
+    console.log($('.select-selected').html())
+ /*  }) */
+}) 
