@@ -11,10 +11,10 @@
                                 <h2 class="single-photo-title"><?php the_title();?></h2>
                             </div>
                             <ul>
-                                <li>Référence : <?php echo get_post_field('reference'); ?></li>
+                                <li>Référence : <?php echo get_field('reference'); ?></li>
                                 <li>Catégorie : <?php echo strip_tags(get_the_term_list( $post->ID, 'categories-photos' )); ?></li>
                                 <li>Format : <?php echo strip_tags(get_the_term_list( $post->ID, 'format' )); ?></li>
-                                <li>Type: <?php echo get_post_field( 'type'); ?></li>
+                                <li>Type: <?php echo get_field( 'type'); ?></li>
                                 <li>Année : <?php echo get_the_date('Y'); ?></li>
                             </ul>
                         </div>

@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 
     $(".btn").click(function(e) {
     e.preventDefault();
-    $("#ref-photo").val(referencePhoto.inputValue);
+    $(".ref-photo").val(referencePhoto.inputValue);
     });
 
     $('.prev').on('mouseenter',function(){

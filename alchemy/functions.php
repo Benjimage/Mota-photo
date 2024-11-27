@@ -20,9 +20,9 @@ function alchemy_enqueue_styles() {
 } 
 
 function alchemy_localize_script() {
-    $reference_value = get_post_field('reference');
+    $reference_value = get_field('reference');
     wp_localize_script('photo-script', 'referencePhoto', array('inputValue' => esc_js($reference_value)));
-    wp_localize_script('filter-script','filter',array());
+   /*  wp_localize_script('filter-script','filter',array()); */
 
 }
 

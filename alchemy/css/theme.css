@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /********************/
 /*  General rules   */
 /********************/
@@ -272,6 +273,16 @@ textarea {
   .left-column ul li {
     font-size: 14px;
   }
+}
+
+.tittle-box {
+  border: 1px solid rgb(147, 10, 238);
+  max-width: 100%; /* §§§§§!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!§§§§§ */
+}
+
+.single-photo-title {
+  border: 1px solid rgb(147, 10, 238);
+  max-width: 30%;
 }
 
 .meta {
