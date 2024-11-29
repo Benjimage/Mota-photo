@@ -2,6 +2,21 @@
 var x = $(".custom-select");
   var l = x.length;
 
+  function ajaxCall() {
+    const select1 = $('#categorie');
+    const select2 = $('#formats');
+    const select3 = $('#date');
+    let categorieText = '';
+    let formatText = '';
+    let date = '';
+
+    select1.children('option').each({
+        $(this).val() === 
+    })
+
+
+  }
+
   for (var i = 0; i < l; i++) {
       var selElmnt = $(x[i]).find("select").first();
       var ll = selElmnt.find("option").length;
@@ -21,6 +36,9 @@ var x = $(".custom-select");
               y.removeClass("same-as-selected");
               $(this).addClass("same-as-selected");
               h.click();
+              console.log('clic sur :', e.target.firstChild.textContent);
+              // APPEL AJAX
+
           });
           b.append(c);
       }
@@ -50,14 +68,10 @@ var x = $(".custom-select");
           }
       });
   }
- /*  console.log($('.select-selected').html());
-  $('.select-selected').on('click', function(){
-    $value = $('.select-selected').html();
-    console.log($value)
-  }) */
-    $('.select-selected').each(function(){
-        $(this).on('click', function(){
-            console.log($('.select-selected').html());
-        });
-      });
+ 
+
+      $('.select-items div').on('click', function() {
+        //var selectedValue = $('.select-selected').val(); 
+        //console.log(selElmnt.options[selElmnt.selectedIndex].innerHTML);
+    }); 
 })(jQuery);

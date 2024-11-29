@@ -1,7 +1,7 @@
 <div class="middle less">
   <div class="left-box">
     <div class="custom-select" style="width:48%;">
-      <select name="categorie">
+      <select id="categorie">
         <option value="">Catégorie</option>
         <?php
         $categories = get_terms('categories-photos');
@@ -13,8 +13,8 @@
     </div>
 
     <div class="custom-select" style="width:48%;">
-      <select name="formats">
-        <option value="Formats">Formats</option>
+      <select id="formats">
+        <option value="">Formats</option>
         <?php
         $formats = get_terms('format');
         foreach ($formats as $format) {
