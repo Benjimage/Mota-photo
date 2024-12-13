@@ -1,5 +1,4 @@
 (function($){
-
   $('.contact').each(function(){
     $(this).on('click', function(){
      $('.modal').css('display', 'flex');

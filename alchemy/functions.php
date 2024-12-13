@@ -112,22 +112,29 @@ function filtre() {
         $args['tax_query'] = $tax_query;
     }
 
-    $query = new WP_Query($args);
+    $catalog = new WP_Query($args);
 
     $retour = [];
 
 
 
-    if($query->have_posts()) {
-        while($query->have_posts()) : $query->the_post();
-            $retour[] = '<h2>'.get_the_title().'</h2>';
+    if($catalog->have_posts()) {
+        $compteur = 0;
+        while($catalog->have_posts()) : //$catalog->the_post();
+            /* $retour[] = '<h2>'.get_the_title().'</h2>'; */
+            ob_start();
+            get_template_part('template-parts/photo', 'bloc', array(
+                'compteur' => $compteur, 
+                'catalog' => $catalog
+            ));
+            $retour[] = ob_get_clean();
         endwhile;
     }
 
       
 
     wp_send_json($retour);
-    die();
+    /* die(); */
 }
 
 add_action('wp_ajax_filtre', 'filtre'); 

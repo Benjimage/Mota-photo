@@ -1,7 +1,7 @@
 <div class="middle less">
   <div class="left-box">
     <div class="custom-select" style="width:48%;">
-      <select id="categorie">
+      <select id="categorie" selected enabled>
         <option value="">Catégorie</option>
         <?php
         $categories = get_terms('categories-photos');
