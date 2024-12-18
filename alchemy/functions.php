@@ -1,5 +1,7 @@
 <?php
 require_once get_stylesheet_directory() . '/includes/photo-custom.php';
+require_once get_stylesheet_directory() . '/includes/filtre-ajax-function.php';
+require_once get_stylesheet_directory() . '/includes/load-more-ajax-function.php';
 
 /* Functions */
 
@@ -8,14 +10,12 @@ function alchemy_supports (){
     add_theme_support('title-tag');
     add_theme_support('menus');
     add_theme_support('custom-logo', array('height' => 175,'width' => 400,'flex-width' => true,));
-
-   
 }
 
 function alchemy_enqueue_styles() { 
     wp_enqueue_script('jquery');
-    wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css')); 
     wp_enqueue_style('select2-style', get_stylesheet_directory_uri() . '/css/select2.css', array(), filemtime(get_stylesheet_directory() . '/css/select2.css')); 
+    wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css')); 
     wp_enqueue_script('photo-script', get_template_directory_uri() . '/js/photo.js', array('jquery'), true);
     wp_enqueue_script('contact-script', get_template_directory_uri() . '/js/contact.js', array('jquery'), filemtime(get_template_directory() . '/js/contact.js'), true);
     wp_enqueue_script('lightbox-script', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), filemtime(get_template_directory() . '/js/lightbox.js'), true);
@@ -78,12 +78,12 @@ add_filter('nav_menu_link_attributes', 'alchemy_menu_link_class');
 add_filter('wp_nav_menu_items','add_menu_item',10, 2);
 add_filter('wp_nav_menu_items','add_li_item',10, 2);
 
-function filtre() {
-    $categorie  = $_POST['categorie']; /* appel ajax / type: POST, data { categorie } */
-    $format  = $_POST['format']; /* appel ajax / type: POST, data { format } */
-    $tri  = $_POST['tri']; /* appel ajax / type: POST, data { tri } */
+//function filtre() {
+//    $categorie  = $_POST['categorie']; /* appel ajax / type: POST, data { categorie } */
+//    $format  = $_POST['format']; /* appel ajax / type: POST, data { format } */
+//    $tri  = $_POST['tri']; /* appel ajax / type: POST, data { tri } */
 
-    $tax_query = array();
+/*     $tax_query = array();
 
     $args = array(
         'post_type'         => 'photo',
@@ -117,11 +117,9 @@ function filtre() {
     $retour = [];
 
 
-
     if($catalog->have_posts()) {
         $compteur = 0;
-        while($catalog->have_posts()) : //$catalog->the_post();
-            /* $retour[] = '<h2>'.get_the_title().'</h2>'; */
+        while($catalog->have_posts()) : 
             ob_start();
             get_template_part('template-parts/photo', 'bloc', array(
                 'compteur' => $compteur, 
@@ -134,9 +132,9 @@ function filtre() {
       
 
     wp_send_json($retour);
-    /* die(); */
 }
 
 add_action('wp_ajax_filtre', 'filtre'); 
 add_action('wp_ajax_nopriv_filtre', 'filtre'); 
  
+ */

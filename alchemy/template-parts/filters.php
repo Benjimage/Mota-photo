@@ -1,7 +1,6 @@
 <div class="middle less">
   <div class="left-box">
-    <div class="custom-select" style="width:48%;">
-      <select id="categorie" selected enabled>
+      <select id="categorie" style="width:48%" selected enabled>
         <option value="">Catégorie</option>
         <?php
         $categories = get_terms('categories-photos');
@@ -10,10 +9,8 @@
         }
         ?>
       </select>
-    </div>
 
-    <div class="custom-select" style="width:48%;">
-      <select id="formats">
+      <select id="formats" style="width:48%">
         <option value="">Formats</option>
         <?php
         $formats = get_terms('format');
@@ -22,13 +19,10 @@
         }
         ?>
       </select>
-    </div>
   </div>
-  <div class="custom-select" style="width:25%;">
-    <select id="date">
+    <select id="date" style="width:25%">
       <option value="DESC">Trier par </option>
       <option value="DESC">ordre décroissant</option>
       <option value="ASC">ordre croissant</option>
     </select>
-  </div>
 </div>

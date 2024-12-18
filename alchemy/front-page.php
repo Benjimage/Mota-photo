@@ -24,7 +24,6 @@
         }
         wp_reset_postdata(); ?>
 
-        <!-- Contenu principal -->
 
         <div class="catalog">
             <!-- <div class="middle less">
@@ -58,6 +57,9 @@
                 endif;
                 wp_reset_postdata(); 
             ?>
+            <div class="load-more-container">
+                <div class="btn load-more">Charger plus</div>
+            </div>
         </div>
 <?php endwhile;endif; ?>
 <?php get_footer(); ?>

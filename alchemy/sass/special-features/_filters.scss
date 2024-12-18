@@ -1,21 +1,25 @@
 .less {
- border: none;
+  border: none;
 }
-.custom-select {
+/* .selecr2-hidden-accessible{
+  font-family: Arial;
+  text-transform: uppercase;
+    
+} */
+/* .custom-select {
     position: relative;
     font-family: Arial;
     text-transform: uppercase;
     border:1px solid #b8bbc2;
     border-radius:10px;
-  }
-  .custom-select:hover {
+  } */
+ /*  .custom-select:hover {
     border:2px solid #3d6eff;
   }
   .custom-select:has(.select-arrow-active ) {
     border:none;
   }
   .custom-select select {
-    //display: block; 
     display: none; 
   }
   
@@ -48,7 +52,7 @@
     color: #000000;
     padding: 8px 16px;
     border: 1px solid transparent;
-    /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
   }
   
@@ -77,4 +81,6 @@
     color:#fff;
   } 
   
-  
+  .select2 {
+    background-color: aqua;
+  } */

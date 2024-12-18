@@ -17,9 +17,12 @@
         ajaxCall();
 
     });
-
+    $('.load-more').on('click', function(){
+        ajaxLoadMore()
+    })
     console.log(ajax_data.ajaxurl);
 
+//Fonction d'appel ajax pour filtres
     function ajaxCall() {
         $.ajax({
             type: 'POST',
@@ -44,5 +47,24 @@
             // complete: function() {}  // exécuté dans tous les cas 
         })
     }
-
+//Fonction d'appel ajax pour "Charger plus"
+    function ajaxLoadMore() {
+        $.ajax({
+            type: 'POST',
+            url: ajax_data.ajaxurl, 
+            data: {
+                action: 'load_more',
+            },
+            success: function(response) {
+                console.log(response);
+                $('.frame').empty();
+                response.forEach(function(photo) {
+                    $('.frame').append(photo);
+                })
+            },
+            error: function(response) {
+                console.log('Erreur');
+            }
+        })
+    }
 })(jQuery);
