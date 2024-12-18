@@ -767,6 +767,33 @@ textarea {
   border: none;
 }
 
+.select2-container--default .select2-selection--single {
+  padding: 8px;
+  min-height: 43px;
+  font-family: Arial;
+  text-transform: uppercase;
+  border: 1px solid #b8bbc2;
+  border-radius: 10px;
+}
+
+.select2-selection {
+  background-color: red;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #000; /* Couleur du texte de l'élément sélectionné */
+}
+
+.select2-container--default .select2-results__option {
+  background-color: #fff; /* Couleur de fond des options */
+  color: #000; /* Couleur du texte des options */
+}
+
+.select2-container--default .select2-results__option--highlighted {
+  background-color: #ffd6d6; /* Couleur de fond de l'option survolée */
+  color: #fff; /* Couleur du texte de l'option survolée */
+}
+
 /* .selecr2-hidden-accessible{
   font-family: Arial;
   text-transform: uppercase;

@@ -2,7 +2,7 @@
 function load_more(){
     $args =array(
         'post_type'         => 'photo',
-        //'posts_per_page'    => -1,
+        'posts_per_page'    => 8,
         'offset'            => 8,
     );  
 

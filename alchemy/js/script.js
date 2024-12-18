@@ -57,10 +57,11 @@
             },
             success: function(response) {
                 console.log(response);
-                $('.frame').empty();
+                /* $('.frame').empty(); */
                 response.forEach(function(photo) {
                     $('.frame').append(photo);
                 })
+            
             },
             error: function(response) {
                 console.log('Erreur');

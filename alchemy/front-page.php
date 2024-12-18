@@ -26,19 +26,13 @@
 
 
         <div class="catalog">
-            <!-- <div class="middle less">
-                <div class="left-box"> -->
-                    <?php /*  get_template_part('template-parts/categorie'); */ ?>
-                    <?php /* get_template_part('template-parts/formats'); */ ?>
-                <!-- </div> -->
-                <?php get_template_part('template-parts/filters');/* get_template_part('template-parts/date'); */ ?>
-            <!-- </div> -->
+                <?php get_template_part('template-parts/filters');?>
             
             <?php 
                 $args = array(
                     'post_type' => 'photo',
-                    'posts_per_page' => 10,
-                    'orderby' => 'rand',
+                    'posts_per_page' => 8,
+                    //'orderby' => 'rand',
                 );
                 $catalog = new WP_Query($args);
                 if ($catalog->have_posts()) : 
