@@ -1,3 +1,5 @@
+ 
+ selected enabled
  "editor.language.colorizedBracketPairs": [
         
     ],

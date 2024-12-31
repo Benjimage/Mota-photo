@@ -1,9 +1,14 @@
 /********************/
 /*  Section Filter  */
 /********************/
-.less { //suppression de la bordure sur la classe middle (CPT single-photo.php)
+//suppression de la bordure sur la classe middle (CPT single-photo.php)
+.less { 
   border: none;
+ /*  @media (max-width: 969px) {
+    flex-direction: column;
+  } */
 }
+//Styles personnalisés select2
 .select2-container--default .select2-selection--single {
   padding: 8px;
   min-height: 43px;
@@ -23,27 +28,32 @@
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   margin-top: 2px;
   height:38px;
- right: 8px;
+  right: 8px;
 }
-.select2-search--dropdown{
+.select2-search{
+  /* visibility: hidden; */
   display: none;
 }
-
 .select2-results__option:first-of-type {
-  color: #fff;
+  /* color: #fff; */
+  visibility: hidden;
 }
 
 .select2-results__option--highlighted[aria-selected]:first-of-type{
-  background-color: #fff;
+  /* background-color: #fff; */
+  visibility: hidden;
 }
-.select2-container--default .select2-results>.select2-results__options{
-  max-height:240px;
+.select2-container--default .select2-results >.select2-results__options{
+  max-height:640px;
 }
 .select2-results__option:last-of-type,
 .select2-dropdown--below {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+/* .select2-dropdown--below {
+  margin-top: 32px;
+} */
 .select2-results__option {
   font-family: Arial, Helvetica, sans-serif;
 }

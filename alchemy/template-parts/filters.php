@@ -1,6 +1,6 @@
 <div class="middle less">
   <div class="left-box">
-      <select id="categorie" style="width:48%" selected enabled>
+      <select id="categorie" style="width:48%">
         <option value="">Catégorie</option>
         <?php
         $categories = get_terms('categories-photos');

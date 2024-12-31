@@ -37,6 +37,8 @@
 
   .contact-form {
     /* width: 597px 31.09375vw; */
+    min-height: 760px;
+    max-height: 840px;
     position: fixed;
     bottom: 0;
     border: 5px solid #000;
@@ -66,10 +68,8 @@
     padding: 40px 20px 0px 20px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     gap: 20px;
-   /*  @extend %border-marking; */
     @media (max-width: 1279px) {
       padding: 2.0833333333333335vw 20px 0px 20px;
 
@@ -90,8 +90,15 @@
   textarea {
     resize: none;
     height: 210px;
+    
   }
-
+  .wpcf7-response-output {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    color:red;
+    border: none !important;
+    bottom :340px;
+  }
   #submit {
     height: 50px;
     padding: 8px 90px 8px 90px;
