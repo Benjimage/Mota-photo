@@ -8,7 +8,8 @@
     flex-direction: column;
     padding: 4.166666666666667vw 0;
   }
-  .frame {
+  .frame,
+  #resultat {
     width: 100%;
     display: flex;
     flex-wrap: wrap;

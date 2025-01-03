@@ -8,15 +8,17 @@ if (have_posts()) :
     endwhile;
 else :
 ?>
+
     <div class="main-centered">
         <?php echo '<h3 class="message">La page que vous recherchez n\'existe pas</h3>'; ?>
         <div class="search-404">
-            <p class="message">Entrez votre recherche</p>
-            <input type="text" name="" id="input-search">
-            <input type="button" value="Rechercher" id="search-submit">
+            <p class="search-message vanish">Entrez votre recherche</p>
+            <input type="text" name="" id="input-search" class="vanish">
+            <input type="button" value="Rechercher" id="search-submit" class="vanish">
         </div>
-        <div id="resultat">
-
+        <div class="catalog">
+            <div id="resultat">
+            </div>
         </div>
     </div>
 <?php

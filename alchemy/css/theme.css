@@ -42,7 +42,8 @@ p {
   text-align: justify;
 }
 
-.message {
+.message,
+.search-message {
   font-family: Space Mono;
 }
 
@@ -666,7 +667,8 @@ textarea {
   padding: 4.1666666667vw 0;
 }
 
-.frame {
+.frame,
+#resultat {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -675,7 +677,8 @@ textarea {
   gap: 1.2vw;
 }
 @media (max-width: 767px) {
-  .frame {
+  .frame,
+  #resultat {
     flex-direction: column;
   }
 }
