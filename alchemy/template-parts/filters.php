@@ -1,6 +1,6 @@
-<div class="middle less">
-  <div class="left-box">
-      <select id="categorie" style="width:48%">
+<div class="filters">
+  <div class="box-filter">
+      <select id="categorie">
         <option value="">Catégorie</option>
         <?php
         $categories = get_terms('categories-photos');
@@ -10,7 +10,7 @@
         ?>
       </select>
 
-      <select id="formats" style="width:48%">
+      <select id="formats">
         <option value="">Formats</option>
         <?php
         $formats = get_terms('format');
@@ -20,9 +20,11 @@
         ?>
       </select>
   </div>
-    <select id="date" style="width:25%">
+  <div class="box-filter">
+    <select id="date">
       <option value="DESC">Trier par </option>
       <option value="DESC">ordre décroissant</option>
       <option value="ASC">ordre croissant</option>
     </select>
+  </div>
 </div>

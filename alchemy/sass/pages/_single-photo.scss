@@ -117,11 +117,11 @@
     flex-direction: column;
     height: 120px;
     width: 100%;
-  border-top: 1px solid #000;
-
+    border-top: 1px solid #000;
   }
 }
 .left-box {
+
   width: 39.2vw;
   display: flex;
   align-items: center;
@@ -131,6 +131,7 @@
     width: 70vw;
     align-items: start;
     padding-bottom: 10px;
+    //border: 1px solid red;
   }
   & p {
     @media (max-width: 767px){
@@ -221,9 +222,12 @@
 /********************/
 .bottom {
   width: 100%;
+  height: 996px;
   display: flex;
   flex-direction: column;
   padding: 4.166666666666667vw 0;
+  //border: 1px dashed #360cf5;
+
   
 }
 .bottom-title {
@@ -232,8 +236,10 @@
   font-weight: 400;
   font-size: 18px;
   width: 100%;
-  @media (max-width:969px) {
+  @media (max-width:767px) {
     font-size: 16px;
+    text-align: center;
+    padding: 10px;
   }
 }
 .liked {
@@ -241,15 +247,18 @@
   display: flex;
   padding: 2.08vw 0;
   gap: 1.2vw;
-  border: 1px dashed #360cf5;
   @media (max-width: 767px) {
     flex-direction: column;
+    padding-bottom: 40px;
+    gap: 8vw;
   }
 }
 
-.liked-img {
+/* .liked-img {
   object-fit: cover;
   width: 39.2vw;
   height: calc(39.2vw * 0.9);
-  
-}
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+} */
