@@ -10,7 +10,7 @@ else :
 ?>
 
     <div class="main-centered">
-        <?php echo '<h3 class="message">La page que vous recherchez n\'existe pas</h3>'; ?>
+        <?php echo '<h3 class="message fade fade-in">La page que vous recherchez n\'existe pas</h3>'; ?>
         <div class="search-404">
             <p class="search-message vanish">Entrez votre recherche</p>
             <input type="text" name="" id="input-search" class="vanish">

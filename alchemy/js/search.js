@@ -15,15 +15,30 @@
                 console.log('Erreur');
             }
         })
-        $('.message').html( 'Voici les photos que vous avez demandées');
-        $('.search-404').animate({
-            top: '-500px',
-            opacity: '0',
-            height: '0',
-          }, 'slow');
-        $(".vanish").css('display', 'none');
-        $('.catalog').css('padding','0')
-        $('.main-centered h3').css('padding','0')
+        
+        
+        $('.search-404').slideUp(600);
+        $('.search-404').css('border','1px solid #88888810');
+        $('.search-404 > input').css('border','1px solid #88888810');
+      
+        display()
     }
     $('#search-submit').on('click', ajaxSearch);
+
+    function afficherTexte(texte) {
+        const $message = $('.message');
+    
+        $message.removeClass('fade-in');
+    
+        $message.one('transitionend', function() {
+            $message.html(texte);
+            $message.addClass('fade-in');
+        });
+    }
+    
+    function display() {
+        afficherTexte('Voici les photos que vous avez demandées');
+    }
+    
 })(jQuery);
+

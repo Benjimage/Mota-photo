@@ -5,12 +5,12 @@
     justify-content: center;
     padding: 80px;
     & h3 {
-        padding: 80px;
         text-align: center;
     }
     .search-404 {
         height: 240px;
         width: 300px;
+        margin-top: 80px;
         border: 1px solid #9e9c9c;
         box-shadow: 4px 4px 8px #0000005e;
         border-radius: 12px;
@@ -51,4 +51,13 @@
     background-color: #8888887e;
     transition: 0.3s;
     cursor: pointer;
+}
+.fade {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out ;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.9s ease-in-out ;
 }

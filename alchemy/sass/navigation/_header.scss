@@ -3,6 +3,9 @@
 /********************/
 header {
     box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.03);
+    @media (max-width:767px){
+        max-height: 80px;
+     }
     
     .menu-container {
         height: 80px;
@@ -16,10 +19,59 @@ header {
         display: flex;
         justify-content:center;
         gap:40px;
+        @media (max-width:767px){
+            padding-left: 40px;
+            flex-direction: column;
+            align-items: start;
+            flex-wrap: wrap;
+            display: none;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100vw;
+            height: 244px; 
+            background-color: #fff;
+            z-index: 99;
+        }
+    }
+    .display {
+        display: flex;
     }
     .custom-logo-link img {
         height: 14px;
         width: 216px;
+    }
+    .burger {
+        display: flex;flex-direction: column;
+        justify-content: space-between;
+        gap:4px;
+        display: none;
+        position:relative;
+        bottom:48px;
+        left: 86vw;
+        @media (max-width:767px){
+            display: flex;
+        }
+    }
+    .offsets {
+        transform: translateY(4px);
+    }
+    .line {
+        border: 1px solid black;
+        width: 24px;
+    }
+    .cross {
+        &:nth-of-type(1){
+            rotate: 45deg;
+            transform: translateY(4px);
+        }
+        &:nth-of-type(2){
+            display: none;
+        }
+        &:nth-of-type(3){
+            rotate: -45deg;
+            transform: translateY(-4.5px);
+        }
     }
 }
 

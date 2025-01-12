@@ -18,6 +18,7 @@ function alchemy_enqueue_styles() {
     wp_enqueue_style('select2-style', get_stylesheet_directory_uri() . '/css/select2.css', array(), filemtime(get_stylesheet_directory() . '/css/select2.css')); 
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css')); 
     wp_enqueue_script('search-script', get_template_directory_uri() . '/js/search.js', array('jquery'), filemtime(get_template_directory() . '/js/search.js'), true);
+    wp_enqueue_script('menu-script', get_template_directory_uri() . '/js/menu.js', array('jquery'), filemtime(get_template_directory() . '/js/menu.js'), true);
     wp_enqueue_script('photo-script', get_template_directory_uri() . '/js/photo.js', array('jquery'), true);
     wp_enqueue_script('contact-script', get_template_directory_uri() . '/js/contact.js', array('jquery'), filemtime(get_template_directory() . '/js/contact.js'), true);
     wp_enqueue_script('lightbox-script', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), filemtime(get_template_directory() . '/js/lightbox.js'), true);

@@ -32,7 +32,7 @@
                 $args = array(
                     'post_type' => 'photo',
                     'posts_per_page' => 8,
-                    //'orderby' => 'rand',
+                    'orderby' => 'rand',
                 );
                 $catalog = new WP_Query($args);
                 if ($catalog->have_posts()) : 

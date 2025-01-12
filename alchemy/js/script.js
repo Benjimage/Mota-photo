@@ -57,7 +57,7 @@
             },
             success: function(response) {
                 console.log(response);
-                /* $('.frame').empty(); */
+               /*  $('.frame').empty(); */
                 response.forEach(function(photo) {
                     $('.frame').append(photo);
                 })

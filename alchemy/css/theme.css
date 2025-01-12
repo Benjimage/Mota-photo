@@ -56,6 +56,11 @@ p {
 header {
   box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.03);
 }
+@media (max-width: 767px) {
+  header {
+    max-height: 80px;
+  }
+}
 header .menu-container {
   height: 80px;
   display: flex;
@@ -69,9 +74,61 @@ header .header-menu {
   justify-content: center;
   gap: 40px;
 }
+@media (max-width: 767px) {
+  header .header-menu {
+    padding-left: 40px;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100vw;
+    height: 244px;
+    background-color: #fff;
+    z-index: 99;
+  }
+}
+header .display {
+  display: flex;
+}
 header .custom-logo-link img {
   height: 14px;
   width: 216px;
+}
+header .burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+  display: none;
+  position: relative;
+  bottom: 48px;
+  left: 86vw;
+}
+@media (max-width: 767px) {
+  header .burger {
+    display: flex;
+  }
+}
+header .offsets {
+  transform: translateY(4px);
+}
+header .line {
+  border: 1px solid black;
+  width: 24px;
+}
+header .cross:nth-of-type(1) {
+  rotate: 45deg;
+  transform: translateY(4px);
+}
+header .cross:nth-of-type(2) {
+  display: none;
+}
+header .cross:nth-of-type(3) {
+  rotate: -45deg;
+  transform: translateY(-4.5px);
 }
 
 /********************/
@@ -131,12 +188,6 @@ footer {
 .action,
 .contact {
   cursor: pointer;
-}
-
-@media (max-width: 767px) {
-  .header-menu > li {
-    display: none;
-  }
 }
 
 /********************/
@@ -583,11 +634,6 @@ textarea {
   width: 100vw;
   height: 100%;
   object-fit: cover;
-  /*   @media (max-width: 767px) {
-        height: 27.65vh; 
-        position: absolute;
-        top: 80px;
-    } */
 }
 
 .photo-event {
@@ -727,7 +773,6 @@ textarea {
 }
 @media (max-width: 767px) {
   .photo-bloc {
-    /* border: 1px solid red; */
     width: 100%;
     height: 100%;
   }
@@ -762,9 +807,6 @@ textarea {
   margin: auto;
 }
 
-/* .filter {
-  display: flex;
-} */
 .overlay {
   width: 100%;
   height: 100%;
@@ -774,6 +816,12 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .overlay {
+    width: 82vw;
+    height: 78vw;
+  }
 }
 .overlay .icons {
   opacity: 0;
@@ -815,10 +863,16 @@ textarea {
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* padding: 40px; */
   background-color: rgba(0, 0, 0, 0.8823529412);
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 767px) {
+  #lightbox {
+    flex-direction: column;
+    justify-content: center;
+    bottom: 0;
+  }
 }
 
 .close-button {
@@ -832,6 +886,12 @@ textarea {
   color: #FFFFFF;
   border: none;
 }
+@media (max-width: 767px) {
+  .close-button {
+    top: 4vw;
+    right: 4vw;
+  }
+}
 
 .img-container {
   width: 30%;
@@ -842,13 +902,28 @@ textarea {
   height: 100%;
   width: 100%;
 }
+@media (max-width: 767px) {
+  .img-container {
+    width: 96%;
+  }
+}
 
 .paysage {
   width: 60vw;
 }
+@media (max-width: 767px) {
+  .paysage {
+    width: 96%;
+  }
+}
 
 .portrait {
   width: 50vw;
+}
+@media (max-width: 767px) {
+  .portrait {
+    width: 96%;
+  }
 }
 
 .data {
@@ -861,6 +936,26 @@ textarea {
   font-family: Space Mono;
 }
 
+.alternative {
+  display: none;
+}
+@media (max-width: 767px) {
+  .alternative {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    position: absolute;
+    bottom: 2vh;
+  }
+}
+
+@media (max-width: 767px) {
+  #prev-img.nav-lightbox,
+  #next-img.nav-lightbox {
+    display: none;
+  }
+}
+
 #left-arrow {
   margin-left: 40px;
 }
@@ -869,7 +964,8 @@ textarea {
   margin-right: 40px;
 }
 
-.nav-lightbox {
+.nav-lightbox,
+.alt {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -1030,12 +1126,12 @@ textarea {
   padding: 80px;
 }
 .main-centered h3 {
-  padding: 80px;
   text-align: center;
 }
 .main-centered .search-404 {
   height: 240px;
   width: 300px;
+  margin-top: 80px;
   border: 1px solid #9e9c9c;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.368627451);
   border-radius: 12px;
@@ -1077,6 +1173,16 @@ textarea {
   background-color: rgba(136, 136, 136, 0.4941176471);
   transition: 0.3s;
   cursor: pointer;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.9s ease-in-out;
 }
 
 /********************/
