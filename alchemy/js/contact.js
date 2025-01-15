@@ -2,6 +2,7 @@
   $('.contact').each(function(){
     $(this).on('click', function(){
      $('.modal').css('display', 'flex');
+     $('.display').hide('slow');
     });
   });
 
@@ -9,6 +10,7 @@
     console.log(this);
     if(event.target == this){
       $(this).css('display', 'none');
+      $('.display').show('slow');
     }
   });
 

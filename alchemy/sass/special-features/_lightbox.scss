@@ -2,41 +2,40 @@
 /*     LIGHTBOX     */
 /********************/
 #lightbox {
-    display: none;
-    position: fixed;
-    top:0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #000000e1;
-    justify-content: space-between;
-    align-items: center;
+  display: none;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000e1;
+  justify-content: space-between;
+  align-items: center;
     @media (max-width: 767px) {
       flex-direction: column;
       justify-content: center;
-      bottom: 0;
     }
 }
 
 .close-button {
-    position: absolute;
-    top: 70px;
-    right: 50px;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #FFFFFF;
-    border: none;
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #FFFFFF;
+  border: none;
     @media (max-width: 767px) {
       top: 4vw;
       right:4vw;
     }
 }
 .img-container {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
     & img{
      height: 100%;
      width: 100%;
@@ -47,35 +46,35 @@
     }
   }
 .paysage {
-    width: 60vw;
+  width: 60vw;
     @media (max-width: 767px){
       width:96%;
     }
 }
 .portrait {
   width: 50vw;
-  @media (max-width: 767px){
-    width:96%;
-  }
+    @media (max-width: 767px){
+      width:96%;
+    }
 }
 .data {
   display: flex;
   justify-content: space-between;
     & span {
-    color:#fff;
+      color:#fff;
     text-transform: uppercase;
     font-family: Space Mono;
-  }
+    }
 }
 .alternative {
   display: none;
-  @media (max-width: 767px) {
+    @media (max-width: 767px) {
     display: flex;
     justify-content: space-between;
     gap:80px;
     position: absolute;
     bottom: 2vh;
-  }
+    }
 }
 
 #prev-img.nav-lightbox,

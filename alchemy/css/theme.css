@@ -212,6 +212,12 @@ footer {
   animation-duration: 0.4s;
   animation-fill-mode: forwards;
 }
+@media (max-width: 767px) {
+  .modal {
+    flex-direction: column;
+    padding-left: 6.48vw;
+  }
+}
 
 .contact-header {
   width: 100%;
@@ -225,12 +231,10 @@ img {
 }
 @media (max-width: 1279px) {
   img {
-    /* height: calc(31.09375vw * 0.18); */
     height: 70px;
   }
 }
 .contact-form {
-  /* width: 597px 31.09375vw; */
   min-height: 760px;
   max-height: 840px;
   position: fixed;
@@ -243,9 +247,6 @@ img {
   -webkit-animation-duration: 0.4s;
   animation-name: slideIn;
   animation-duration: 0.4s;
-  /* @media (max-width: 1279px) {
-    width: 60vw;
-    } */
 }
 @media (min-width: 1280px) {
   .contact-form {
@@ -257,6 +258,11 @@ img {
   .contact-form {
     width: 360px;
     height: 680px;
+    top: 0;
+    -webkit-animation-name: slideInTop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideInTop;
+    animation-duration: 0.4s;
   }
 }
 
@@ -668,6 +674,26 @@ textarea {
     opacity: 1;
   }
 }
+@-webkit-keyframes slideInTop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes slideInTop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -871,7 +897,6 @@ textarea {
   #lightbox {
     flex-direction: column;
     justify-content: center;
-    bottom: 0;
   }
 }
 

@@ -16,6 +16,10 @@
     animation-name: fadeIn ;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      padding-left: 6.48vw;
+    }
   }
 
   .contact-header {
@@ -28,7 +32,6 @@
   img {
     height: 106px;
     @media (max-width: 1279px) {
-    /* height: calc(31.09375vw * 0.18); */
     height: 70px;
     }
     @media (max-width: 767px) {
@@ -36,7 +39,6 @@
   }
 
   .contact-form {
-    /* width: 597px 31.09375vw; */
     min-height: 760px;
     max-height: 840px;
     position: fixed;
@@ -53,12 +55,15 @@
       width: 597px;
       height: 769px; 
     }
-    /* @media (max-width: 1279px) {
-      width: 60vw;
-      } */
+    
     @media (max-width: 768px) {
       width: 360px;
       height: 680px;
+      top: 0;
+      -webkit-animation-name: slideInTop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: slideInTop;
+      animation-duration: 0.4s;
     }
   }
 

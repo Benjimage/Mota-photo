@@ -10,5 +10,15 @@ burgerIcon.addEventListener('click', () => {
     menu.classList.toggle('display');
 })
 
-
-   
+/*     (function($){
+        const $burgerIcon = $('.burger');
+        const $slices = $('.line');
+        const $menu = $('.header-menu');
+    
+        $burgerIcon.on('click', function() {
+            $burgerIcon.toggleClass('offsets');
+            $slices.toggleClass('cross');
+            $menu.toggleClass('display');
+        });
+    })(jQuery);
+    */
