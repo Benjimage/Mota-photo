@@ -5,9 +5,11 @@
     width: 79.722vw ;
     margin: auto;
     padding-top: 40px;
+    border: 1px solid rgb(47, 255, 0);
 
-    @media (max-width:769px){
+    @media (max-width:767px){
       width: 100vw;
+
     }
 }
 
@@ -23,10 +25,17 @@
   @media (max-width: 767px) {
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: center;
     width: 100%;
+  border: 1px solid rgb(47, 255, 0);
+
+    //height: 60vh;
   }
 }
 .left-column {
+  border: 1px solid orange;
+  /* height: 100% */;
+  margin-top: 34.12%;
   width: 39.2vw;
   display: flex;
   flex-direction: column;
@@ -50,21 +59,22 @@
   @media (max-width: 767px) {
   justify-content: center;
     width: 70vw;
-    height: 100%;
-    border: none;
+    margin-top: 10vw;
+    /* height: 100%; */
+    //border: none;
   }
 }  
-.tittle-box {
-  /* border: 1px solid  rgb(147, 10, 238); */
-  max-width: 100%; /* §§§§§!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!§§§§§ */
+.title-box {
+  border: 1px solid  rgb(238, 10, 10);
+  max-width: 100%; 
+  //min-height: 115px;
 }
-.single-photo-title {
- /*  border: 1px solid  rgb(147, 10, 238); */
+/* .single-photo-title {
   max-width: 30%;
-}
+} */
 .meta {
   min-width: 39.2vw;
-  height: 321px;
+  /* height: 321px; */
   margin-bottom: 20px;
   @media (max-width: 767px) {
   width: 70vw;
@@ -79,9 +89,11 @@
   font-weight: 400;
   line-height: 58px;
   max-height:116px;
-  /*  */
+  border: 1px solid  rgb(147, 10, 238);
+  /* width: 50%; */
   @media (max-width: 969px) {
     font-size: 44px;
+    width: 100%;
   }
 }
 .main-picture { 
@@ -165,6 +177,9 @@
   flex-direction: column;
   position: relative;
   top: 4px;
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 .prev {
   width: 2.0833333333333335vw;
